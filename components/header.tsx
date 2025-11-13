@@ -1,0 +1,31 @@
+"use client"
+
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import NewHazeLogo from "@/components/new-haze-logo"
+
+export default function Header() {
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-md border-b border-white/10">
+      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="text-white">
+          <NewHazeLogo className="h-[70px]" href="/" />
+        </div>
+
+        <nav className="flex items-center gap-4">
+          <Link href="/blog">
+            <Button
+              variant="outline"
+              className="border border-[#855CF2] text-white hover:bg-[#855CF2] hover:text-white px-6 py-2 rounded-full transition-all duration-300 bg-transparent"
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+            >
+              Blog & Guías
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
+        </nav>
+      </div>
+    </header>
+  )
+}
