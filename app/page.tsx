@@ -41,7 +41,6 @@ export default function NewHazeLanding() {
               <br />
               Donde cada cultivo es una obra de arte.
             </p>
-            <Link href="/blog">
               <Button
                 size="lg"
                 className="bg-[#F18604] hover:bg-[#E07503] text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
@@ -50,7 +49,6 @@ export default function NewHazeLanding() {
                 Descubrí más<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-2 h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-             </Link> 
           </div>
         </div>
 
