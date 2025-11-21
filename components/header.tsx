@@ -20,7 +20,7 @@ export default function Header() {
               className="border border-[#855CF2] hover:bg-[#855CF2] hover:text-white px-6 py-2 rounded-full transition-all duration-300 text-foreground bg-muted"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              Blog & Guías
+              Blog
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
