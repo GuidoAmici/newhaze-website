@@ -6,6 +6,11 @@ import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { BlogNavProvider } from "@/components/blog-nav-provider"
 import "./globals.css"
+import { Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+
+// Initialize fonts
+const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"], variable: '--v0-font-source-serif-4' })
+const _v0_fontVariables = `${_sourceSerif_4.variable}`
 
 export const metadata: Metadata = {
   title: "New Haze - Cultivá tu Futuro",
@@ -20,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${_v0_fontVariables}`}>
         <BlogNavProvider>
           <Suspense fallback={null}>{children}</Suspense>
         </BlogNavProvider>
