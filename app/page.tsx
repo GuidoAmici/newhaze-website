@@ -146,7 +146,7 @@ export default function NewHazeLanding() {
             <h2 className="text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: "HVD Poster, sans-serif" }}>
               COMUNIDAD CULTIVADORA
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: "Montserrat, sans-serif" }}>
+            <p className="text-xl max-w-3xl mx-auto text-white" style={{ fontFamily: "Montserrat, sans-serif" }}>
               Más que productos, creamos conexiones. Somos una familia de cultivadores que comparte conocimiento,
               experiencias y pasión.
             </p>
@@ -192,13 +192,13 @@ export default function NewHazeLanding() {
 
           <div className="text-center mt-16">
             <blockquote
-              className="text-2xl font-light text-white/95 italic max-w-4xl mx-auto"
+              className="text-2xl font-light italic max-w-4xl mx-auto text-white"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               "New Haze no solo me dio las herramientas, me dio una familia. Cada cultivo es una nueva aventura
               compartida."
             </blockquote>
-            <p className="text-white/80 mt-4 font-semibold">- María, Cultivadora desde 2022</p>
+            <p className="mt-4 font-semibold text-white">- María, Cultivadora desde 2022</p>
           </div>
         </div>
       </section>
