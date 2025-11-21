@@ -141,11 +141,6 @@ export default function NewHazeLanding() {
 
       {/* Community Section */}
       <section className="py-20 bg-gradient-to-br from-[#00B57C] to-[#059669] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-40 h-40 border-2 border-white/30 rounded-full"></div>
-          <div className="absolute bottom-10 right-10 w-32 h-32 border border-white/20 rotate-45"></div>
-        </div>
-
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: "HVD Poster, sans-serif" }}>
