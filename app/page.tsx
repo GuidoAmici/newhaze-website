@@ -293,7 +293,7 @@ export default function NewHazeLanding() {
               </span>
             </h2>
             <p
-              className="text-xl mb-12 leading-relaxed text-foreground"
+              className="text-xl mb-12 leading-relaxed text-white"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               Sé parte de una comunidad que está redefiniendo el cultivo indoor.
