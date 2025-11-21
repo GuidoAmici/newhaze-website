@@ -207,7 +207,7 @@ export default function NewHazeLanding() {
       <section className="py-20 bg-muted relative">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-foreground mb-6" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+            <h2 className="text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: "HVD Poster, sans-serif" }}>
               HERRAMIENTAS DE INNOVACIÓN
             </h2>
             <p
@@ -278,7 +278,7 @@ export default function NewHazeLanding() {
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2
-              className="text-center text-6xl font-bold text-background mb-8"
+              className="text-center text-6xl font-bold mb-8 text-white"
               style={{ fontFamily: "HVD Poster, sans-serif" }}
             >
               UNITE A LA
@@ -288,7 +288,7 @@ export default function NewHazeLanding() {
               </span>
             </h2>
             <p
-              className="text-xl mb-12 leading-relaxed text-white"
+              className="text-xl mb-12 leading-relaxed text-zinc-300"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               Sé parte de una comunidad que está redefiniendo el cultivo indoor.
@@ -324,7 +324,7 @@ export default function NewHazeLanding() {
                 >
                   10K+
                 </div>
-                <div className="text-white" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="text-zinc-300" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   Cultivadores
                 </div>
               </div>
