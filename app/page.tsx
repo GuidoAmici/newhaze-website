@@ -244,7 +244,7 @@ export default function NewHazeLanding() {
             ].map((product, index) => (
               <Card
                 key={index}
-                className="group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                className="group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-card-foreground bg-card"
               >
                 <div className="h-48 relative overflow-hidden" style={{ backgroundColor: product.color }}>
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
