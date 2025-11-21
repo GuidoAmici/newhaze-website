@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Leaf, Users, Lightbulb, Heart, ArrowRight, Microscope, Sprout } from "lucide-react"
+import { Leaf, Users, Lightbulb, Heart, ArrowRight } from "lucide-react"
 import Header from "@/components/header"
 import Link from "next/link"
 
 export default function NewHazeLanding() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Header />
 
       {/* Hero Section */}
@@ -31,7 +31,7 @@ export default function NewHazeLanding() {
             >
               CULTIVÁ TU
               <br />
-              <span className="bg-clip-text text-[F18604] text-chart-5">FUTURO</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#F18604] to-[#FF9F1C]">FUTURO</span>
             </h1>
             <p
               className="text-xl md:text-2xl text-white/90 mb-12 font-light"
@@ -50,7 +50,7 @@ export default function NewHazeLanding() {
                 Descubrí más
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              </Link>
+            </Link>
           </div>
         </div>
 
@@ -62,13 +62,12 @@ export default function NewHazeLanding() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-        </div>
+      <section className="py-20 bg-card relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5"></div>
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-[#0E0E12] mb-6" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+            <h2 className="text-5xl font-bold text-foreground mb-6" style={{ fontFamily: "HVD Poster, sans-serif" }}>
               NUESTRA MISIÓN
             </h2>
             <div className="w-24 h-1 bg-[#855CF2] mx-auto mb-8"></div>
@@ -83,12 +82,15 @@ export default function NewHazeLanding() {
                   </div>
                   <div>
                     <h3
-                      className="text-2xl font-bold text-[#0E0E12] mb-3"
+                      className="text-2xl font-bold text-foreground mb-3"
                       style={{ fontFamily: "HVD Poster, sans-serif" }}
                     >
                       INNOVACIÓN
                     </h3>
-                    <p className="text-gray-700 leading-relaxed" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                    <p
+                      className="text-muted-foreground leading-relaxed"
+                      style={{ fontFamily: "Montserrat, sans-serif" }}
+                    >
                       Revolucionamos el cultivo indoor con tecnología de vanguardia y métodos científicos que maximizan
                       el potencial de cada planta.
                     </p>
@@ -103,12 +105,15 @@ export default function NewHazeLanding() {
                   </div>
                   <div>
                     <h3
-                      className="text-2xl font-bold text-[#0E0E12] mb-3"
+                      className="text-2xl font-bold text-foreground mb-3"
                       style={{ fontFamily: "HVD Poster, sans-serif" }}
                     >
                       PASIÓN
                     </h3>
-                    <p className="text-gray-700 leading-relaxed" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                    <p
+                      className="text-muted-foreground leading-relaxed"
+                      style={{ fontFamily: "Montserrat, sans-serif" }}
+                    >
                       Cada producto nace de la pasión por el cultivo perfecto, combinando arte, ciencia y dedicación en
                       cada detalle.
                     </p>
@@ -163,10 +168,10 @@ export default function NewHazeLanding() {
               <div className="bg-[#855CF2] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-[#0E0E12] mb-4" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+              <h3 className="text-2xl font-bold text-foreground mb-4" style={{ fontFamily: "HVD Poster, sans-serif" }}>
                 +10K CULTIVADORES
               </h3>
-              <p className="text-gray-700" style={{ fontFamily: "Montserrat, sans-serif" }}>
+              <p className="text-muted-foreground" style={{ fontFamily: "Montserrat, sans-serif" }}>
                 Una comunidad activa que comparte tips, técnicas y celebra cada cosecha exitosa.
               </p>
             </Card>
@@ -175,10 +180,10 @@ export default function NewHazeLanding() {
               <div className="bg-[#F18604] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Lightbulb className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-[#0E0E12] mb-4" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+              <h3 className="text-2xl font-bold text-foreground mb-4" style={{ fontFamily: "HVD Poster, sans-serif" }}>
                 INNOVACIÓN CONSTANTE
               </h3>
-              <p className="text-gray-700" style={{ fontFamily: "Montserrat, sans-serif" }}>
+              <p className="text-muted-foreground" style={{ fontFamily: "Montserrat, sans-serif" }}>
                 Desarrollamos soluciones basadas en las necesidades reales de nuestra comunidad.
               </p>
             </Card>
@@ -187,10 +192,10 @@ export default function NewHazeLanding() {
               <div className="bg-[#00B57C] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Heart className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-[#0E0E12] mb-4" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+              <h3 className="text-2xl font-bold text-foreground mb-4" style={{ fontFamily: "HVD Poster, sans-serif" }}>
                 SOPORTE 24/7
               </h3>
-              <p className="text-gray-700" style={{ fontFamily: "Montserrat, sans-serif" }}>
+              <p className="text-muted-foreground" style={{ fontFamily: "Montserrat, sans-serif" }}>
                 Acompañamos cada etapa de tu cultivo con asesoramiento experto y personalizado.
               </p>
             </Card>
@@ -210,13 +215,16 @@ export default function NewHazeLanding() {
       </section>
 
       {/* Products Showcase */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted relative">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-[#0E0E12] mb-6" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+            <h2 className="text-5xl font-bold text-foreground mb-6" style={{ fontFamily: "HVD Poster, sans-serif" }}>
               HERRAMIENTAS DE INNOVACIÓN
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: "Montserrat, sans-serif" }}>
+            <p
+              className="text-xl text-muted-foreground max-w-3xl mx-auto"
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+            >
               Productos diseñados por cultivadores, para cultivadores. Cada herramienta es el resultado de años de
               investigación y feedback de nuestra comunidad.
             </p>
@@ -254,12 +262,12 @@ export default function NewHazeLanding() {
                 </div>
                 <div className="p-6">
                   <h3
-                    className="text-2xl font-bold text-[#0E0E12] mb-3"
+                    className="text-2xl font-bold text-foreground mb-3"
                     style={{ fontFamily: "HVD Poster, sans-serif" }}
                   >
                     {product.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                  <p className="text-muted-foreground leading-relaxed" style={{ fontFamily: "Montserrat, sans-serif" }}>
                     {product.description}
                   </p>
                 </div>
@@ -268,7 +276,7 @@ export default function NewHazeLanding() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-lg text-gray-600 mb-6" style={{ fontFamily: "Montserrat, sans-serif" }}>
+            <p className="text-lg text-muted-foreground mb-6" style={{ fontFamily: "Montserrat, sans-serif" }}>
               Nuestros productos son el medio, no el fin. El verdadero valor está en la comunidad que construimos
               juntos.
             </p>
@@ -277,7 +285,7 @@ export default function NewHazeLanding() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-[#0E0E12] relative overflow-hidden">
+      <section className="py-20 bg-foreground relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-32 h-32 border-2 border-[#855CF2]/30 rounded-full animate-pulse"></div>
           <div className="absolute top-40 right-32 w-24 h-24 border border-[#00B57C]/20 rotate-45"></div>
@@ -287,14 +295,20 @@ export default function NewHazeLanding() {
 
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-center text-6xl font-bold text-white mb-8" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+            <h2
+              className="text-center text-6xl font-bold text-background mb-8"
+              style={{ fontFamily: "HVD Poster, sans-serif" }}
+            >
               UNITE A LA
               <br />
               <span className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#855CF2] to-[#00B57C]">
                 REVOLUCIÓN
               </span>
             </h2>
-            <p className="text-xl text-white/90 mb-12 leading-relaxed" style={{ fontFamily: "Montserrat, sans-serif" }}>
+            <p
+              className="text-xl text-background/90 mb-12 leading-relaxed"
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+            >
               Sé parte de una comunidad que está redefiniendo el cultivo indoor.
               <br />
               Donde la ciencia, la naturaleza y la pasión se encuentran.
@@ -328,7 +342,7 @@ export default function NewHazeLanding() {
                 >
                   10K+
                 </div>
-                <div className="text-white/70" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="text-background/70" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   Cultivadores
                 </div>
               </div>
@@ -339,7 +353,7 @@ export default function NewHazeLanding() {
                 >
                   50+
                 </div>
-                <div className="text-white/70" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="text-background/70" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   Productos
                 </div>
               </div>
@@ -350,7 +364,7 @@ export default function NewHazeLanding() {
                 >
                   24/7
                 </div>
-                <div className="text-white/70" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="text-background/70" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   Soporte
                 </div>
               </div>
@@ -361,7 +375,7 @@ export default function NewHazeLanding() {
                 >
                   100%
                 </div>
-                <div className="text-white/70" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="text-background/70" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   Innovación
                 </div>
               </div>
