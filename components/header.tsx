@@ -17,7 +17,7 @@ export default function Header() {
           <Link href="/blog">
             <Button
               variant="outline"
-              className="border border-[#855CF2] text-white hover:bg-[#855CF2] hover:text-white px-6 py-2 rounded-full transition-all duration-300 bg-[rgba(64,17,204,0)]"
+              className="border border-[#855CF2] hover:bg-[#855CF2] hover:text-white px-6 py-2 rounded-full transition-all duration-300 bg-muted text-foreground"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               Blog & Guías

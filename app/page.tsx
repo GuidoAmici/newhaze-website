@@ -12,17 +12,11 @@ export default function NewHazeLanding() {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary"
         style={{
           background: "linear-gradient(135deg, #855CF2 0%, #6B46C1 50%, #4C1D95 100%)",
         }}
       >
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-40 right-32 w-24 h-24 border border-white/20 rotate-45"></div>
-          <div className="absolute bottom-32 left-1/4 w-16 h-16 border-2 border-white/25 rounded-full"></div>
-          <div className="absolute bottom-20 right-20 w-20 h-20 border border-white/30 rotate-12"></div>
-        </div>
-
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1
@@ -63,7 +57,7 @@ export default function NewHazeLanding() {
 
       {/* Mission & Vision Section */}
       <section className="py-20 bg-card relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5"></div>
+        <div className="absolute inset-0 opacity-5 bg-background"></div>
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
@@ -154,7 +148,7 @@ export default function NewHazeLanding() {
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+            <h2 className="text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: "HVD Poster, sans-serif" }}>
               COMUNIDAD CULTIVADORA
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto" style={{ fontFamily: "Montserrat, sans-serif" }}>
@@ -164,7 +158,7 @@ export default function NewHazeLanding() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="bg-white/95 backdrop-blur-sm p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <Card className="backdrop-blur-sm p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card">
               <div className="bg-[#855CF2] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8 text-white" />
               </div>
@@ -176,7 +170,7 @@ export default function NewHazeLanding() {
               </p>
             </Card>
 
-            <Card className="bg-white/95 backdrop-blur-sm p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <Card className="backdrop-blur-sm p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card">
               <div className="bg-[#F18604] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Lightbulb className="w-8 h-8 text-white" />
               </div>
@@ -188,7 +182,7 @@ export default function NewHazeLanding() {
               </p>
             </Card>
 
-            <Card className="bg-white/95 backdrop-blur-sm p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <Card className="backdrop-blur-sm p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card">
               <div className="bg-[#00B57C] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Heart className="w-8 h-8 text-white" />
               </div>
@@ -285,14 +279,7 @@ export default function NewHazeLanding() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-foreground relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-32 h-32 border-2 border-[#855CF2]/30 rounded-full animate-pulse"></div>
-          <div className="absolute top-40 right-32 w-24 h-24 border border-[#00B57C]/20 rotate-45"></div>
-          <div className="absolute bottom-32 left-1/4 w-16 h-16 border-2 border-[#F18604]/25 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-20 h-20 border border-[#855CF2]/30 rotate-12"></div>
-        </div>
-
+      <section className="py-20 relative overflow-hidden bg-background">
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2
@@ -306,7 +293,7 @@ export default function NewHazeLanding() {
               </span>
             </h2>
             <p
-              className="text-xl text-background/90 mb-12 leading-relaxed"
+              className="text-xl mb-12 leading-relaxed text-foreground"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               Sé parte de una comunidad que está redefiniendo el cultivo indoor.
@@ -342,7 +329,7 @@ export default function NewHazeLanding() {
                 >
                   10K+
                 </div>
-                <div className="text-background/70" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   Cultivadores
                 </div>
               </div>
@@ -353,7 +340,7 @@ export default function NewHazeLanding() {
                 >
                   50+
                 </div>
-                <div className="text-background/70" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   Productos
                 </div>
               </div>
@@ -364,7 +351,7 @@ export default function NewHazeLanding() {
                 >
                   24/7
                 </div>
-                <div className="text-background/70" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   Soporte
                 </div>
               </div>
@@ -375,7 +362,7 @@ export default function NewHazeLanding() {
                 >
                   100%
                 </div>
-                <div className="text-background/70" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   Innovación
                 </div>
               </div>
