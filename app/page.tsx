@@ -279,7 +279,7 @@ export default function NewHazeLanding() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 relative overflow-hidden bg-background">
+      <section className="py-20 relative overflow-hidden bg-black">
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2
@@ -329,7 +329,7 @@ export default function NewHazeLanding() {
                 >
                   10K+
                 </div>
-                <div className="" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="text-white" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   Cultivadores
                 </div>
               </div>
@@ -340,7 +340,7 @@ export default function NewHazeLanding() {
                 >
                   50+
                 </div>
-                <div className="" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="text-white" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   Productos
                 </div>
               </div>
@@ -351,7 +351,7 @@ export default function NewHazeLanding() {
                 >
                   24/7
                 </div>
-                <div className="" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="text-white" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   Soporte
                 </div>
               </div>
@@ -362,7 +362,7 @@ export default function NewHazeLanding() {
                 >
                   100%
                 </div>
-                <div className="" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="text-white" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   Innovación
                 </div>
               </div>
