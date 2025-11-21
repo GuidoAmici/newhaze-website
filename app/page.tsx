@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Leaf, Users, Lightbulb, Heart, ArrowRight, Microscope, Sprout } from "lucide-react"
 import Header from "@/components/header"
+import Link from "next/link"
 
 export default function NewHazeLanding() {
   return (
@@ -17,7 +18,6 @@ export default function NewHazeLanding() {
         }}
       >
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-32 h-32 border-2 border-white/30 rounded-full"></div>
           <div className="absolute top-40 right-32 w-24 h-24 border border-white/20 rotate-45"></div>
           <div className="absolute bottom-32 left-1/4 w-16 h-16 border-2 border-white/25 rounded-full"></div>
           <div className="absolute bottom-20 right-20 w-20 h-20 border border-white/30 rotate-12"></div>
@@ -41,14 +41,16 @@ export default function NewHazeLanding() {
               <br />
               Donde cada cultivo es una obra de arte.
             </p>
+            <Link href="/blog">
               <Button
                 size="lg"
                 className="bg-[#F18604] hover:bg-[#E07503] text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
                 style={{ fontFamily: "Montserrat, sans-serif" }}
               >
-                Descubrí más<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-2 h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                Descubrí más
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+              </Link>
           </div>
         </div>
 
@@ -62,9 +64,6 @@ export default function NewHazeLanding() {
       {/* Mission & Vision Section */}
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
-          <Leaf className="absolute top-20 left-10 w-32 h-32 text-[#00B57C] rotate-12" />
-          <Microscope className="absolute top-40 right-20 w-24 h-24 text-[#855CF2] -rotate-12" />
-          <Sprout className="absolute bottom-20 left-1/4 w-28 h-28 text-[#00B57C] rotate-45" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
