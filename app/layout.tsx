@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Suspense } from "react"
 import { BlogNavProvider } from "@/components/blog-nav-provider"
 import "./globals.css"
@@ -10,9 +11,8 @@ import "./globals.css"
 import { Heebo as V0_Font_Heebo, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
 // Initialize fonts
-const _heebo = V0_Font_Heebo({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"], variable: '--v0-font-heebo' })
-const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"], variable: '--v0-font-source-serif-4' })
-const _v0_fontVariables = `${_heebo.variable} ${_sourceSerif_4.variable}`
+const _heebo = V0_Font_Heebo({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
+const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
 
 export const metadata: Metadata = {
   title: "New Haze - Cultivá tu Futuro",
@@ -32,6 +32,7 @@ export default function RootLayout({
           <Suspense fallback={null}>{children}</Suspense>
         </BlogNavProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
