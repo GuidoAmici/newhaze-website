@@ -30,7 +30,6 @@ export default function NewHazeLogo({
       } group`}
       style={{
         // Glow inicial del logo
-        filter: `drop-shadow(0 0 6px ${glowColor})`,
         transition: "filter 0.6s ease, opacity 0.5s ease",
       }}
     >
@@ -45,7 +44,6 @@ export default function NewHazeLogo({
 
         .group:hover svg {
           animation: logo-bounce 0.6s ease-out forwards;
-          filter: drop-shadow(0 0 10px ${glowColor});
         }
       `}</style>
 
