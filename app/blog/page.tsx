@@ -93,7 +93,7 @@ export default function BlogPage() {
       </section>
 
       {/* Guides Grid */}
-      <section className="py-20 px-6 border-foreground bg-background">
+      <section className="py-20 px-6 border-foreground bg-background text-foreground">
         <div className="container mx-auto max-w-6xl">
           {loading ? (
             <div className="text-center text-white/60 text-lg animate-pulse">Cargando guías...</div>
