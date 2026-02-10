@@ -11,7 +11,6 @@ import { useUser } from "@clerk/nextjs"
 
 export default function Header() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false)
-  const [isThemeSwitching, setIsThemeSwitching] = useState(false)
   const { theme, setTheme } = useTheme()
   const { isSignedIn } = useUser()
   const settingsRef = useRef<HTMLDivElement>(null)
@@ -31,13 +30,7 @@ export default function Header() {
   }, [isSettingsOpen])
 
   const handleThemeToggle = () => {
-    setIsThemeSwitching(true)
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        setTheme(theme === "dark" ? "light" : "dark")
-        setIsThemeSwitching(false)
-      }, 150)
-    })
+    setTheme(theme === "dark" ? "light" : "dark")
   }
 
   return (
@@ -102,13 +95,15 @@ export default function Header() {
                       {/* Slider Toggle */}
                       <button
                         onClick={handleThemeToggle}
-                        className={`theme-switch ${theme === "dark" ? "theme-switch-active" : "theme-switch-inactive"}`}
+                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 ${
+                          theme === "dark" ? "bg-accent" : "bg-muted"
+                        }`}
                         aria-label="Cambiar tema"
-                        aria-pressed={theme === "dark"}
-                        role="switch"
                       >
                         <span
-                          className={`theme-switch-thumb ${theme === "dark" ? "theme-switch-thumb-active" : "theme-switch-thumb-inactive"} ${isThemeSwitching ? "theme-switch-thumb-pressing" : ""}`}
+                          className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-transform duration-300 ${
+                            theme === "dark" ? "translate-x-6" : "translate-x-1"
+                          }`}
                         />
                       </button>
 

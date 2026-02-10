@@ -144,46 +144,11 @@
   --shadow-x: var(--shadow-x);
 }
 
-@layer components {
-  .theme-switch {
-    @apply relative inline-flex h-7 w-12 items-center rounded-full cursor-pointer;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-
-  .theme-switch-active {
-    @apply bg-accent;
-    box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 50%, transparent);
-  }
-
-  .theme-switch-inactive {
-    @apply bg-muted;
-    box-shadow: none;
-  }
-
-  .theme-switch-thumb {
-    @apply inline-block h-5 w-5 rounded-full bg-white;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease-in-out, scale 0.15s ease-in-out;
-    will-change: transform;
-  }
-
-  .theme-switch-thumb-active {
-    transform: translateX(22px);
-    box-shadow: 0 0 6px color-mix(in srgb, var(--accent) 40%, transparent), 0 1px 3px rgba(0, 0, 0, 0.2);
-  }
-
-  .theme-switch-thumb-inactive {
-    transform: translateX(3px);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-  }
-
-  .theme-switch-thumb-pressing {
-    scale: 1.2;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .theme-switch,
-    .theme-switch-thumb {
-      transition: none !important;
-    }
+  body {
+    @apply bg-background text-foreground;
   }
 }

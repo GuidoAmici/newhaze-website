@@ -21,6 +21,7 @@ export default function NewHazeLanding() {
           <div className="max-w-4xl mx-auto">
             <h1
               className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight"
+              style={{ fontFamily: "HVD Poster, sans-serif" }}
             >
               CULTIVÁ TU
               <br />
