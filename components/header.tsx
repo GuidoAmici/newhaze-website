@@ -102,7 +102,7 @@ export default function Header() {
                       >
                         <span
                           className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-all duration-500 ease-in-out ${
-                            theme === "dark" ? "translate-x-6" : "translate-x-1"
+                            theme === "dark" ? "translate-x-5" : "translate-x-0.5"
                           }`}
                         />
                       </button>
