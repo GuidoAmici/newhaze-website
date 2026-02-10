@@ -85,7 +85,7 @@ export default function BlogPage() {
               resultados reales.
             </p>
           </div>
-          <p className="text-white/70 leading-relaxed" style={{ fontFamily: "Montserrat, sans-serif" }}>
+          <p className="leading-relaxed text-muted-foreground" style={{ fontFamily: "Montserrat, sans-serif" }}>
             Desde técnicas avanzadas hasta soluciones prácticas, aquí encontrarás todo lo necesario para maximizar tu
             cultivo indoor.
           </p>
