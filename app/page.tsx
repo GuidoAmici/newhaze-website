@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export default function NewHazeLanding() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Header />
 
       {/* Hero Section */}
@@ -17,10 +17,10 @@ export default function NewHazeLanding() {
           background: "linear-gradient(135deg, #855CF2 0%, #6B46C1 50%, #4C1D95 100%)",
         }}
       >
-        <div className="container mx-auto px-6 text-center relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1
-              className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight"
+              className="text-4xl sm:text-6xl md:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight text-balance"
               style={{ fontFamily: "HVD Poster, sans-serif" }}
             >
               CULTIVÁ TU
@@ -28,7 +28,7 @@ export default function NewHazeLanding() {
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#F18604] to-[#FF9F1C]">FUTURO</span>
             </h1>
             <p
-              className="text-xl md:text-2xl text-white/90 mb-12 font-light"
+              className="text-base sm:text-xl md:text-2xl text-white/90 mb-8 sm:mb-12 font-light text-pretty"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               Innovación, ciencia y naturaleza se encuentran en New Haze.
@@ -61,17 +61,17 @@ export default function NewHazeLanding() {
       <section className="py-20 bg-card relative overflow-hidden">
         <div className="absolute inset-0 opacity-5 bg-background"></div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-6 text-foreground text-balance" style={{ fontFamily: "HVD Poster, sans-serif" }}>
               NUESTRA MISIÓN
             </h2>
             <div className="w-24 h-1 bg-[#855CF2] mx-auto mb-8"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-            <div className="space-y-8">
-              <Card className="p-8 border-l-4 border-l-[#00B57C] shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center max-w-6xl mx-auto">
+            <div className="space-y-6 sm:space-y-8">
+              <Card className="p-4 sm:p-8 border-l-4 border-l-[#00B57C] shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-start space-x-4">
                   <div className="bg-[#00B57C] p-3 rounded-full">
                     <Lightbulb className="w-6 h-6 text-white" />
@@ -94,7 +94,7 @@ export default function NewHazeLanding() {
                 </div>
               </Card>
 
-              <Card className="p-8 border-l-4 border-l-[#855CF2] shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Card className="p-4 sm:p-8 border-l-4 border-l-[#855CF2] shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-start space-x-4">
                   <div className="bg-[#855CF2] p-3 rounded-full">
                     <Heart className="w-6 h-6 text-white" />
@@ -119,15 +119,15 @@ export default function NewHazeLanding() {
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-[#855CF2] to-[#6B46C1] p-8 rounded-3xl text-white shadow-2xl">
-                <h3 className="text-3xl font-bold mb-6" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+              <div className="bg-gradient-to-br from-[#855CF2] to-[#6B46C1] p-5 sm:p-8 rounded-3xl text-white shadow-2xl">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6" style={{ fontFamily: "HVD Poster, sans-serif" }}>
                   NUESTRA VISIÓN
                 </h3>
-                <p className="text-lg leading-relaxed mb-6" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   Ser la marca líder que conecta ciencia y naturaleza, creando una comunidad global de cultivadores que
                   transforman espacios en ecosistemas prósperos.
                 </p>
-                <div className="flex space-x-4">
+                <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
                     Sustentabilidad
                   </Badge>
@@ -142,24 +142,24 @@ export default function NewHazeLanding() {
       </section>
 
       {/* Community Section */}
-      <section className="py-20 bg-gradient-to-br from-[#00B57C] to-[#059669] relative overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+      <section className="py-12 sm:py-20 bg-gradient-to-br from-[#00B57C] to-[#059669] relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-6 text-foreground text-balance" style={{ fontFamily: "HVD Poster, sans-serif" }}>
               COMUNIDAD CULTIVADORA
             </h2>
-            <p className="text-xl max-w-3xl mx-auto text-white" style={{ fontFamily: "Montserrat, sans-serif" }}>
+            <p className="text-base sm:text-xl max-w-3xl mx-auto text-white text-pretty" style={{ fontFamily: "Montserrat, sans-serif" }}>
               Más que productos, creamos conexiones. Somos una familia de cultivadores que comparte conocimiento,
               experiencias y pasión.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="backdrop-blur-sm p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card">
-              <div className="bg-[#855CF2] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-white" />
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+            <Card className="backdrop-blur-sm p-5 sm:p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card">
+              <div className="bg-[#855CF2] w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <Users className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4" style={{ fontFamily: "HVD Poster, sans-serif" }}>
                 +10K CULTIVADORES
               </h3>
               <p className="text-muted-foreground" style={{ fontFamily: "Montserrat, sans-serif" }}>
@@ -167,11 +167,11 @@ export default function NewHazeLanding() {
               </p>
             </Card>
 
-            <Card className="backdrop-blur-sm p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card">
-              <div className="bg-[#F18604] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Lightbulb className="w-8 h-8 text-white" />
+            <Card className="backdrop-blur-sm p-5 sm:p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card">
+              <div className="bg-[#F18604] w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <Lightbulb className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4" style={{ fontFamily: "HVD Poster, sans-serif" }}>
                 INNOVACIÓN CONSTANTE
               </h3>
               <p className="text-muted-foreground" style={{ fontFamily: "Montserrat, sans-serif" }}>
@@ -179,11 +179,11 @@ export default function NewHazeLanding() {
               </p>
             </Card>
 
-            <Card className="backdrop-blur-sm p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card">
-              <div className="bg-[#00B57C] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="w-8 h-8 text-white" />
+            <Card className="backdrop-blur-sm p-5 sm:p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card">
+              <div className="bg-[#00B57C] w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <Heart className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4" style={{ fontFamily: "HVD Poster, sans-serif" }}>
                 SOPORTE 24/7
               </h3>
               <p className="text-muted-foreground" style={{ fontFamily: "Montserrat, sans-serif" }}>
@@ -192,9 +192,9 @@ export default function NewHazeLanding() {
             </Card>
           </div>
 
-          <div className="text-center mt-16">
+          <div className="text-center mt-10 sm:mt-16">
             <blockquote
-              className="text-2xl font-light italic max-w-4xl mx-auto text-white"
+              className="text-lg sm:text-2xl font-light italic max-w-4xl mx-auto text-white text-pretty"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               "New Haze no solo me dio las herramientas, me dio una familia. Cada cultivo es una nueva aventura
@@ -206,14 +206,14 @@ export default function NewHazeLanding() {
       </section>
 
       {/* Products Showcase */}
-      <section className="py-20 bg-muted relative">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+      <section className="py-12 sm:py-20 bg-muted relative">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-6 text-foreground text-balance" style={{ fontFamily: "HVD Poster, sans-serif" }}>
               HERRAMIENTAS DE INNOVACIÓN
             </h2>
             <p
-              className="text-xl text-muted-foreground max-w-3xl mx-auto"
+              className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               Productos diseñados por cultivadores, para cultivadores. Cada herramienta es el resultado de años de
@@ -221,7 +221,7 @@ export default function NewHazeLanding() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {[
               {
                 title: "Kit Starter Pro",
@@ -276,11 +276,11 @@ export default function NewHazeLanding() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 relative overflow-hidden bg-black">
-        <div className="container mx-auto px-6 text-center relative z-10">
+      <section className="py-12 sm:py-20 relative overflow-hidden bg-black">
+        <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2
-              className="text-center text-6xl font-bold mb-8 text-white"
+              className="text-center text-4xl sm:text-6xl font-bold mb-6 sm:mb-8 text-white text-balance"
               style={{ fontFamily: "HVD Poster, sans-serif" }}
             >
               UNITE A LA
@@ -290,7 +290,7 @@ export default function NewHazeLanding() {
               </span>
             </h2>
             <p
-              className="text-xl mb-12 leading-relaxed text-zinc-300"
+              className="text-base sm:text-xl mb-8 sm:mb-12 leading-relaxed text-zinc-300 text-pretty"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               Sé parte de una comunidad que está redefiniendo el cultivo indoor.
@@ -301,7 +301,7 @@ export default function NewHazeLanding() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-[#F18604] hover:bg-[#E07503] text-white px-12 py-4 text-lg font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
+                className="bg-[#F18604] hover:bg-[#E07503] text-white px-8 sm:px-12 py-4 text-base sm:text-lg font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
                 style={{ fontFamily: "Montserrat, sans-serif" }}
               >
                 Unirme a la Comunidad
@@ -311,7 +311,7 @@ export default function NewHazeLanding() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-[#855CF2] text-[#855CF2] hover:bg-[#855CF2] hover:text-white px-12 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-transparent"
+                className="border-2 border-[#855CF2] text-[#855CF2] hover:bg-[#855CF2] hover:text-white px-8 sm:px-12 py-4 text-base sm:text-lg font-semibold rounded-full transition-all duration-300 bg-transparent w-full sm:w-auto"
                 style={{ fontFamily: "Montserrat, sans-serif" }}
               >
                 Conocer más

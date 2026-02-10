@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^5.4.0",
-    "@clerk/themes": "latest",
+    "@clerk/themes": "2.4.51",
     "@hookform/resolvers": "^3.10.0",
     "@pinia/colada": "latest",
     "@radix-ui/react-accordion": "1.2.2",

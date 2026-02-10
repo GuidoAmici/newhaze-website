@@ -52,31 +52,31 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-md border-b border-white/10">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="text-foreground">
-          <NewHazeLogo className="h-[70px]" href="/" />
+      <div className="container mx-auto px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+        <div className="text-foreground shrink-0">
+          <NewHazeLogo className="h-[50px] sm:h-[70px]" href="/" />
         </div>
 
-        <nav className="flex items-center gap-4">
+        <nav className="flex items-center gap-2 sm:gap-4">
           <Link href="/blog">
             <Button
               variant="outline"
-              className="border border-primary hover:bg-primary hover:text-primary-foreground px-6 py-2 rounded-full transition-all duration-300 text-foreground bg-muted"
+              className="border border-primary hover:bg-primary hover:text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-foreground bg-muted text-xs sm:text-sm"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               Blog & Guías
             </Button>
           </Link>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3">
             {/* Clerk Authentication Buttons */}
             {!isSignedIn ? (
               <SignInButton mode="modal">
                 <button
-                  className="h-10 w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300"
+                  className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300"
                   aria-label="Iniciar sesión"
                 >
-                  <User className="h-5 w-5" />
+                  <User className="h-4 w-4 sm:h-5 sm:w-5" />
                 </button>
               </SignInButton>
             ) : (
@@ -87,14 +87,14 @@ export default function Header() {
             <div className="relative" ref={settingsRef}>
               <button
                 onClick={toggleSettings}
-                className="h-10 w-10 rounded-full text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300 bg-primary"
+                className="h-8 w-8 sm:h-10 sm:w-10 rounded-full text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300 bg-primary"
                 aria-label="Configuración"
               >
-                <Settings className="h-5 w-5" />
+                <Settings className="h-4 w-4 sm:h-5 sm:w-5" />
               </button>
 
               {isSettingsOpen && (
-                <div className={`absolute right-0 mt-2 w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50 ${
+                <div className={`absolute right-0 mt-2 w-52 sm:w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50 ${
                   isSettingsClosing
                     ? "animate-out fade-out slide-out-to-top-2 duration-200"
                     : "animate-in fade-in slide-in-from-top-2 duration-200"
