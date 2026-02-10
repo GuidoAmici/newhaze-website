@@ -11,6 +11,7 @@ import { useUser } from "@clerk/nextjs"
 
 export default function Header() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false)
+  const [isThemeSwitching, setIsThemeSwitching] = useState(false)
   const { theme, setTheme } = useTheme()
   const { isSignedIn } = useUser()
   const settingsRef = useRef<HTMLDivElement>(null)
@@ -30,7 +31,9 @@ export default function Header() {
   }, [isSettingsOpen])
 
   const handleThemeToggle = () => {
+    setIsThemeSwitching(true)
     setTheme(theme === "dark" ? "light" : "dark")
+    setTimeout(() => setIsThemeSwitching(false), 300)
   }
 
   return (
@@ -88,27 +91,24 @@ export default function Header() {
 
                     <div className="flex items-center gap-2">
                       {/* Sun Icon */}
-                      <Sun className={`h-4 w-4 transition-colors duration-30000 ${
+                      <Sun className={`h-4 w-4 transition-colors duration-300 ${
                         theme === "dark" ? "text-muted-foreground" : "text-accent"
                       }`} />
 
                       {/* Slider Toggle */}
                       <button
                         onClick={handleThemeToggle}
-                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-all duration-500 ease-in-out ${
-                          theme === "dark" ? "bg-accent" : "bg-muted"
-                        }`}
+                        className={`theme-switch ${theme === "dark" ? "theme-switch-active" : "theme-switch-inactive"} ${isThemeSwitching ? "scale-100" : ""}`}
                         aria-label="Cambiar tema"
+                        aria-pressed={theme === "dark"}
                       >
                         <span
-                          className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-all duration-500 ease-in-out ${
-                            theme === "dark" ? "translate-x-5" : "translate-x-0.5"
-                          }`}
+                          className={`theme-switch-thumb ${theme === "dark" ? "theme-switch-thumb-active" : "theme-switch-thumb-inactive"}`}
                         />
                       </button>
 
                       {/* Moon Icon */}
-                      <Moon className={`h-4 w-4 transition-colors duration-30000 ${
+                      <Moon className={`h-4 w-4 transition-colors duration-300 ${
                         theme === "dark" ? "text-accent" : "text-muted-foreground"
                       }`} />
                     </div>
