@@ -56,7 +56,7 @@ export default function NewHazeLogo({
 
       {/* SVG original (solo ajustado para usar fill fijo) */}
       <svg
-        className={`${className} transition-all duration-500 ease-in-out`}
+        className={`${className} transition-all duration-500 ease-in-out text-foreground`}
         viewBox="0 0 1080 513.86"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="xMidYMid meet"
