@@ -11,15 +11,32 @@ import { useUser } from "@clerk/nextjs"
 
 export default function Header() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false)
+  const [isSettingsClosing, setIsSettingsClosing] = useState(false)
   const { theme, setTheme } = useTheme()
   const { isSignedIn } = useUser()
   const settingsRef = useRef<HTMLDivElement>(null)
+
+  const closeSettings = () => {
+    setIsSettingsClosing(true)
+    setTimeout(() => {
+      setIsSettingsOpen(false)
+      setIsSettingsClosing(false)
+    }, 200)
+  }
+
+  const toggleSettings = () => {
+    if (isSettingsOpen) {
+      closeSettings()
+    } else {
+      setIsSettingsOpen(true)
+    }
+  }
 
   // Close menu when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (settingsRef.current && !settingsRef.current.contains(event.target as Node)) {
-        setIsSettingsOpen(false)
+        closeSettings()
       }
     }
 
@@ -69,7 +86,7 @@ export default function Header() {
             {/* Settings Menu */}
             <div className="relative" ref={settingsRef}>
               <button
-                onClick={() => setIsSettingsOpen(!isSettingsOpen)}
+                onClick={toggleSettings}
                 className="h-10 w-10 rounded-full text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300 bg-primary"
                 aria-label="Configuración"
               >
@@ -77,7 +94,11 @@ export default function Header() {
               </button>
 
               {isSettingsOpen && (
-                <div className="absolute right-0 mt-2 w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50 animate-in fade-in slide-in-from-top-2 data[state=closed]:duration-300 data[state=closed]:animate-out data[state=closed]:fade-out data[state=closed]:slide-out-to-top-2 data[state=closed]:duration-1000">
+                <div className={`absolute right-0 mt-2 w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50 ${
+                  isSettingsClosing
+                    ? "animate-out fade-out slide-out-to-top-2 duration-200"
+                    : "animate-in fade-in slide-in-from-top-2 duration-200"
+                }`}>
                   <div className="px-4 py-2 text-sm font-semibold text-foreground border-b border-border">
                     Configuración
                   </div>
