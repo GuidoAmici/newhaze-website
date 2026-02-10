@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { BlogNavProvider } from "@/components/blog-nav-provider"
 import { ClerkProvider } from "@clerk/nextjs"
+import { dark } from '@clerk/themes'
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
