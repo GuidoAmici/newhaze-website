@@ -70,7 +70,7 @@ export default function Header() {
             <div className="relative" ref={settingsRef}>
               <button
                 onClick={() => setIsSettingsOpen(!isSettingsOpen)}
-                className="h-10 w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300"
+                className="h-10 w-10 rounded-full text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300 bg-primary"
                 aria-label="Configuración"
               >
                 <Settings className="h-5 w-5" />
