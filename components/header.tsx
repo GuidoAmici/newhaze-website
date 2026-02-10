@@ -88,7 +88,7 @@ export default function Header() {
 
                     <div className="flex items-center gap-2">
                       {/* Sun Icon */}
-                      <Sun className={`h-4 w-4 transition-colors duration-3000 ${
+                      <Sun className={`h-4 w-4 transition-colors duration-30000 ${
                         theme === "dark" ? "text-muted-foreground" : "text-accent"
                       }`} />
 
@@ -108,7 +108,7 @@ export default function Header() {
                       </button>
 
                       {/* Moon Icon */}
-                      <Moon className={`h-4 w-4 transition-colors duration-3000 ${
+                      <Moon className={`h-4 w-4 transition-colors duration-30000 ${
                         theme === "dark" ? "text-accent" : "text-muted-foreground"
                       }`} />
                     </div>
