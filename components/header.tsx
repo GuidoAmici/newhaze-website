@@ -95,13 +95,13 @@ export default function Header() {
                       {/* Slider Toggle */}
                       <button
                         onClick={handleThemeToggle}
-                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 ${
+                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-all duration-500 ease-in-out ${
                           theme === "dark" ? "bg-accent" : "bg-muted"
                         }`}
                         aria-label="Cambiar tema"
                       >
                         <span
-                          className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-transform duration-300 ${
+                          className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-all duration-500 ease-in-out ${
                             theme === "dark" ? "translate-x-6" : "translate-x-1"
                           }`}
                         />
