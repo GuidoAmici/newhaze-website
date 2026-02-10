@@ -77,38 +77,41 @@ export default function Header() {
               </button>
 
               {isSettingsOpen && (
-                <div className="absolute right-0 mt-2 w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="absolute right-0 mt-2 w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200 data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=closed]:slide-out-to-top-2 data-[state=closed]:duration-200">
                   <div className="px-4 py-2 text-sm font-semibold text-foreground border-b border-border">
                     Configuración
                   </div>
 
                   {/* Theme Slider */}
-                  <div className="px-4 py-3 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      {theme === "dark" ? (
-                        <Moon className="h-4 w-4" />
-                      ) : (
-                        <Sun className="h-4 w-4" />
-                      )}
-                      <span className="text-sm text-foreground">
-                        {theme === "dark" ? "Tema Oscuro" : "Tema Claro"}
-                      </span>
-                    </div>
+                  <div className="px-4 py-3 flex items-center justify-between gap-3">
+                    <span className="text-sm text-foreground">Tema Oscuro</span>
 
-                    {/* Slider Toggle */}
-                    <button
-                      onClick={handleThemeToggle}
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 ${
-                        theme === "dark" ? "bg-accent" : "bg-muted"
-                      }`}
-                      aria-label="Cambiar tema"
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-transform duration-300 ${
-                          theme === "dark" ? "translate-x-6" : "translate-x-1"
+                    <div className="flex items-center gap-2">
+                      {/* Sun Icon */}
+                      <Sun className={`h-4 w-4 transition-colors duration-300 ${
+                        theme === "dark" ? "text-muted-foreground" : "text-accent"
+                      }`} />
+
+                      {/* Slider Toggle */}
+                      <button
+                        onClick={handleThemeToggle}
+                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 ${
+                          theme === "dark" ? "bg-accent" : "bg-muted"
                         }`}
-                      />
-                    </button>
+                        aria-label="Cambiar tema"
+                      >
+                        <span
+                          className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-transform duration-300 ${
+                            theme === "dark" ? "translate-x-6" : "translate-x-1"
+                          }`}
+                        />
+                      </button>
+
+                      {/* Moon Icon */}
+                      <Moon className={`h-4 w-4 transition-colors duration-300 ${
+                        theme === "dark" ? "text-accent" : "text-muted-foreground"
+                      }`} />
+                    </div>
                   </div>
                 </div>
               )}
