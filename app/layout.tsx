@@ -55,7 +55,11 @@ export default function RootLayout({
         />
       </head>
       <body className={`font-sans ${heebo.variable}`}>
-        <ClerkProvider>
+         <ClerkProvider
+  appearance={{
+     theme: dark,
+   }}
+ >
           <ThemeProvider 
             attribute="class" 
             defaultTheme="dark" 
