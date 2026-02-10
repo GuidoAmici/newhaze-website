@@ -146,37 +146,44 @@
 
 @layer components {
   .theme-switch {
-    @apply relative inline-flex h-6 w-11 items-center rounded-full transition-all duration-300 ease-in-out cursor-pointer;
+    @apply relative inline-flex h-7 w-12 items-center rounded-full cursor-pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
 
   .theme-switch-active {
     @apply bg-accent;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 50%, transparent);
   }
 
   .theme-switch-inactive {
     @apply bg-muted;
-  }
-
-  .theme-switch:active .theme-switch-thumb {
-    @apply scale-110;
+    box-shadow: none;
   }
 
   .theme-switch-thumb {
-    @apply inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-all duration-300 ease-in-out;
+    @apply inline-block h-5 w-5 rounded-full bg-white;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease-in-out, scale 0.15s ease-in-out;
+    will-change: transform;
   }
 
   .theme-switch-thumb-active {
-    @apply translate-x-5 shadow-[0_0_8px_rgba(102,51,153,0.4)];
+    transform: translateX(22px);
+    box-shadow: 0 0 6px color-mix(in srgb, var(--accent) 40%, transparent), 0 1px 3px rgba(0, 0, 0, 0.2);
   }
 
   .theme-switch-thumb-inactive {
-    @apply translate-x-0.5;
+    transform: translateX(3px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  }
+
+  .theme-switch-thumb-pressing {
+    scale: 1.2;
   }
 
   @media (prefers-reduced-motion: reduce) {
     .theme-switch,
     .theme-switch-thumb {
-      @apply transition-none duration-0;
+      transition: none !important;
     }
   }
 }

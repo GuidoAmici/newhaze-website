@@ -32,8 +32,12 @@ export default function Header() {
 
   const handleThemeToggle = () => {
     setIsThemeSwitching(true)
-    setTheme(theme === "dark" ? "light" : "dark")
-    setTimeout(() => setIsThemeSwitching(false), 300)
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        setTheme(theme === "dark" ? "light" : "dark")
+        setIsThemeSwitching(false)
+      }, 150)
+    })
   }
 
   return (
@@ -98,12 +102,13 @@ export default function Header() {
                       {/* Slider Toggle */}
                       <button
                         onClick={handleThemeToggle}
-                        className={`theme-switch ${theme === "dark" ? "theme-switch-active" : "theme-switch-inactive"} ${isThemeSwitching ? "scale-100" : ""}`}
+                        className={`theme-switch ${theme === "dark" ? "theme-switch-active" : "theme-switch-inactive"}`}
                         aria-label="Cambiar tema"
                         aria-pressed={theme === "dark"}
+                        role="switch"
                       >
                         <span
-                          className={`theme-switch-thumb ${theme === "dark" ? "theme-switch-thumb-active" : "theme-switch-thumb-inactive"}`}
+                          className={`theme-switch-thumb ${theme === "dark" ? "theme-switch-thumb-active" : "theme-switch-thumb-inactive"} ${isThemeSwitching ? "theme-switch-thumb-pressing" : ""}`}
                         />
                       </button>
 
