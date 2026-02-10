@@ -2,11 +2,11 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { Moon, Sun, Settings } from "lucide-react"
+import { Moon, Sun, Settings, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
 import NewHazeLogo from "@/components/new-haze-logo"
-import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs"
+import { SignInButton, UserButton } from "@clerk/nextjs"
 import { useUser } from "@clerk/nextjs"
 
 export default function Header() {
@@ -54,26 +54,14 @@ export default function Header() {
           <div className="flex items-center gap-3">
             {/* Clerk Authentication Buttons */}
             {!isSignedIn ? (
-              <>
-                <SignInButton mode="modal">
-                  <Button
-                    variant="outline"
-                    className="border border-primary hover:bg-primary hover:text-primary-foreground px-6 py-2 rounded-full transition-all duration-300 text-foreground bg-transparent"
-                    style={{ fontFamily: "Montserrat, sans-serif" }}
-                  >
-                    Iniciar sesión
-                  </Button>
-                </SignInButton>
-
-                <SignUpButton mode="modal">
-                  <Button
-                    className="bg-accent hover:bg-accent/90 text-white px-6 py-2 rounded-full transition-all duration-300"
-                    style={{ fontFamily: "Montserrat, sans-serif" }}
-                  >
-                    Registrarse
-                  </Button>
-                </SignUpButton>
-              </>
+              <SignInButton mode="modal">
+                <button
+                  className="h-10 w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300"
+                  aria-label="Iniciar sesión"
+                >
+                  <User className="h-5 w-5" />
+                </button>
+              </SignInButton>
             ) : (
               <UserButton />
             )}
