@@ -71,7 +71,7 @@ export default function BlogPage() {
       <Header />
 
       {/* Blog Header Section with Banner */}
-      <section className="pt-32 pb-16 px-6 border-b bg-gradient-to-b from-[#855CF2]/5 to-transparent animate-in fade-in duration-500 bg-background border-muted-foreground">
+      <section className="pt-32 pb-16 px-6 border-b bg-gradient-to-b from-[#855CF2]/5 to-transparent animate-in fade-in duration-500 bg-background border-muted-foreground text-foreground">
         <div className="container mx-auto max-w-4xl">
           <h1
             className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-foreground"
