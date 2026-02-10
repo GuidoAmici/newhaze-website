@@ -80,7 +80,7 @@ export default function BlogPage() {
             Blog & Guías
           </h1>
           <div className="bg-[#855CF2]/10 border border-[#855CF2]/30 rounded-lg p-6 mb-8">
-            <p className="text-lg text-white/90 leading-relaxed" style={{ fontFamily: "Montserrat, sans-serif" }}>
+            <p className="text-lg leading-relaxed text-foreground" style={{ fontFamily: "Montserrat, sans-serif" }}>
               Explorá nuestras guías y artículos pensados para cultivadores que buscan precisión, innovación y
               resultados reales.
             </p>
@@ -118,13 +118,13 @@ export default function BlogPage() {
                     {/* Content */}
                     <div className="p-6">
                       <h3
-                        className="text-2xl font-bold text-white mb-3 group-hover:text-[#855CF2] transition-colors duration-300 line-clamp-2"
+                        className="text-2xl font-bold mb-3 group-hover:text-[#855CF2] transition-colors duration-300 line-clamp-2 text-foreground"
                         style={{ fontFamily: "HVD Poster, sans-serif" }}
                       >
                         {guide.title}
                       </h3>
                       <p
-                        className="text-white/70 mb-6 leading-relaxed line-clamp-3"
+                        className="mb-6 leading-relaxed line-clamp-3 text-muted-foreground"
                         style={{ fontFamily: "Montserrat, sans-serif" }}
                       >
                         {guide.excerpt}
