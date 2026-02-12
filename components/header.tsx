@@ -110,10 +110,13 @@ export default function Header() {
             <Button
               variant="subtle"
               onClick={toggleSettings}
-              className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300"
               aria-label="Settings"
-              >
-              <Settings className="h-4 w-4 sm:h-5 sm:w-5" />
+            >
+              <Settings 
+                className={`h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-300 ${
+                  isSettingsOpen ? "-rotate-60" : "rotate-0"
+                }`}
+              />
             </Button>
 
             {isSettingsOpen && (
