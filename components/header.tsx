@@ -58,25 +58,27 @@ export default function Header() {
         </div>
 
         <nav className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-1.5 sm:gap-3">
           <Link href="/learn">
-            <Button
+            <button
               variant="outline"
               className="border border-primary hover:bg-primary hover:text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-foreground bg-muted text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               <span className="hidden xs:inline">Aprender</span>
-            </Button>
+            </button>
           </Link>
+          </div>
 
           <Link href="/blog">
-            <Button
+            <button
               variant="outline"
               className="border border-primary hover:bg-primary hover:text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-foreground bg-muted text-xs sm:text-sm"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               Blog & Guías
-            </Button>
+            </button>
           </Link>
 
           <div className="flex items-center gap-1.5 sm:gap-3">
@@ -84,7 +86,7 @@ export default function Header() {
             {!isSignedIn ? (
               <SignInButton mode="modal">
                 <button
-                  className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300"
+                  className="h-8 w-8 sm:h-10 sm:w-10 rounded-full text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300 bg-muted"
                   aria-label="Iniciar sesión"
                 >
                   <User className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -98,7 +100,7 @@ export default function Header() {
             <div className="relative" ref={settingsRef}>
               <button
                 onClick={toggleSettings}
-                className="h-8 w-8 sm:h-10 sm:w-10 rounded-full text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300 bg-primary"
+                className="h-8 w-8 sm:h-10 sm:w-10 rounded-full text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300 bg-muted"
                 aria-label="Configuración"
               >
                 <Settings className="h-4 w-4 sm:h-5 sm:w-5" />
