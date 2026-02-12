@@ -8,7 +8,7 @@ import { dark } from '@clerk/themes'
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
-import { Rubik, Roboto_Slab, Rubik_Mono_1 } from 'next/font/google'
+import { Rubik, Roboto_Slab, Roboto_Mono } from 'next/font/google'
 
 // Initialize System Design fonts
 const rubik = Rubik({
@@ -25,7 +25,7 @@ const robotoSlab = Roboto_Slab({
   display: "swap",
 })
 
-const rubikMono = Rubik_Mono_1({
+const robotoMono = Roboto_Mono({
   subsets: ["latin"],
   weight: ["400", "600"],
   variable: "--font-mono",
@@ -65,7 +65,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`font-sans ${rubik.variable} ${robotoSlab.variable} ${rubikMono.variable}`}>
+      <body className={`font-sans ${rubik.variable} ${robotoSlab.variable} ${robotoMono.variable}`}>
         <ClerkProvider
           appearance={{
             theme: dark,
