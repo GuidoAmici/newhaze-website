@@ -4,7 +4,7 @@
 
 @theme inline {
   --font-sans: 'Rubik', 'Rubik Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-mono: 'Roboto Mono', 'Roboto Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

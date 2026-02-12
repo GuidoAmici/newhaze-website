@@ -96,13 +96,14 @@ export default function Header() {
 
             {/* Settings Menu */}
             <div className="relative" ref={settingsRef}>
-              <button
+              <Button
+                variant="subtle"
                 onClick={toggleSettings}
                 className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300"
                 aria-label="Configuración"
               >
                 <Settings className="h-4 w-4 sm:h-5 sm:w-5" />
-              </button>
+              </Button>
 
               {isSettingsOpen && (
                 <div 
