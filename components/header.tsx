@@ -64,7 +64,7 @@ export default function Header() {
               className="text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+              <GraduationCap className="h-3.5 w-3.5 sm:w-5 sm:h-5" />
               <span className="hidden xs:inline">Aprender</span>
             </Button>
           </Link>
