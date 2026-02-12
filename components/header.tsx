@@ -75,7 +75,7 @@ export default function Header() {
               className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary hover:bg-primary hover:text-primary-foreground rounded-full transition-all duration-300 text-foreground bg-muted text-xs sm:text-sm flex items-center justify-center"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              <GraduationCap />
+              <GraduationCap className="w-5 h-5" />
             </button>
           </Link>
 
