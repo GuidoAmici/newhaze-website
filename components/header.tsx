@@ -60,11 +60,11 @@ export default function Header() {
         <nav className="flex items-center gap-2 sm:gap-4">
           <Link href="/learn">
             <Button
-              variant="outline"
-              className="text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2"
+              variant="subtle"
+              className="sm:h-10 sm:w-10 h-8 w-8 text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              <GraduationCap className="h-4 w-4 sm:w-5 sm:h-5" />
+              <GraduationCap className="sm:w-5 sm:h-5 h-4 w-4" />
               <span className="hidden xs:inline">Aprender</span>
             </Button>
           </Link>
