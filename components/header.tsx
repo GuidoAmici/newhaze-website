@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { Moon, Sun, Settings, BrainIcon,User, GraduationCap } from "lucide-react"
+import { Moon, Sun, Settings, User, GraduationCap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
 import NewHazeLogo from "@/components/new-haze-logo"
@@ -58,33 +58,33 @@ export default function Header() {
         </div>
 
         <nav className="flex items-center gap-2 sm:gap-4">
-          <div className="flex items-center gap-1.5 sm:gap-3">
           <Link href="/learn">
-            <button
+            <Button
               variant="outline"
-              className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
+              className="border border-primary hover:bg-primary hover:text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-foreground bg-muted text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
+              <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               <span className="hidden xs:inline">Aprender</span>
-            </button>
+            </Button>
           </Link>
 
           <Link href="/blog">
-            <button
+            <Button
               variant="outline"
-              className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
+              className="border border-primary hover:bg-primary hover:text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-foreground bg-muted text-xs sm:text-sm"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              <BrainIcon className="w-5 h-5" />
-            </button>
+              Blog & Guías
+            </Button>
           </Link>
 
+          <div className="flex items-center gap-1.5 sm:gap-3">
             {/* Clerk Authentication Buttons */}
             {!isSignedIn ? (
               <SignInButton mode="modal">
                 <button
-                  className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
+                  className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300"
                   aria-label="Iniciar sesión"
                 >
                   <User className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -98,18 +98,23 @@ export default function Header() {
             <div className="relative" ref={settingsRef}>
               <button
                 onClick={toggleSettings}
-                className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
+                className="h-8 w-8 sm:h-10 sm:w-10 rounded-full text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300 bg-primary"
                 aria-label="Configuración"
               >
                 <Settings className="h-4 w-4 sm:h-5 sm:w-5" />
               </button>
 
               {isSettingsOpen && (
-                <div className={`absolute right-0 mt-2 w-52 sm:w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50 transition-all duration-300 ${
-                  isSettingsClosing
-                    ? "opacity-0 pointer-events-none"
-                    : "opacity-100"
-                }`}>
+                <div 
+                  className="absolute right-0 mt-2 w-52 sm:w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50"
+                  style={{
+                    transform: isSettingsClosing ? "scale(0.95)" : "scale(1)",
+                    opacity: isSettingsClosing ? 0 : 1,
+                    transition: "all 0.2s ease-in-out",
+                    transformOrigin: "top right",
+                    pointerEvents: isSettingsClosing ? "none" : "auto"
+                  }}
+                >
                   <div className="px-4 py-2 text-sm font-semibold text-foreground border-b border-border">
                     Configuración
                   </div>
@@ -134,7 +139,7 @@ export default function Header() {
                       >
                         <span
                           className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-transform duration-300 ${
-                            theme === "dark" ? "translate-x-6 transition-translate" : "translate-x-1 transition-translate"
+                            theme === "dark" ? "translate-x-5" : "translate-x-0.5"
                           }`}
                         />
                       </button>
