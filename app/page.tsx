@@ -21,7 +21,7 @@ export default function NewHazeLanding() {
           <div className="max-w-4xl mx-auto">
             <h1
               className="text-4xl sm:text-6xl md:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight text-balance"
-              style={{ fontFamily: "HVD Poster, sans-serif" }}
+
             >
               CULTIVÁ TU
               <br />
@@ -29,7 +29,7 @@ export default function NewHazeLanding() {
             </h1>
             <p
               className="text-base sm:text-xl md:text-2xl text-white/90 mb-8 sm:mb-12 font-light text-pretty"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
+
             >
               Innovación, ciencia y naturaleza se encuentran en New Haze.
               <br />
@@ -40,7 +40,7 @@ export default function NewHazeLanding() {
                 <Button
                   size="lg"
                   className="bg-[#F18604] hover:bg-[#E07503] text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
-                  style={{ fontFamily: "Montserrat, sans-serif" }}
+    
                 >
                   Descubrí más
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -79,13 +79,13 @@ export default function NewHazeLanding() {
                   <div>
                     <h3
                       className="text-2xl font-bold text-foreground mb-3"
-                      style={{ fontFamily: "HVD Poster, sans-serif" }}
+        
                     >
                       INNOVACIÓN
                     </h3>
                     <p
                       className="text-muted-foreground leading-relaxed"
-                      style={{ fontFamily: "Montserrat, sans-serif" }}
+        
                     >
                       Revolucionamos el cultivo indoor con tecnología de vanguardia y métodos científicos que maximizan
                       el potencial de cada planta.
@@ -102,13 +102,13 @@ export default function NewHazeLanding() {
                   <div>
                     <h3
                       className="text-2xl font-bold text-foreground mb-3"
-                      style={{ fontFamily: "HVD Poster, sans-serif" }}
+        
                     >
                       PASIÓN
                     </h3>
                     <p
                       className="text-muted-foreground leading-relaxed"
-                      style={{ fontFamily: "Montserrat, sans-serif" }}
+        
                     >
                       Cada producto nace de la pasión por el cultivo perfecto, combinando arte, ciencia y dedicación en
                       cada detalle.
@@ -195,7 +195,7 @@ export default function NewHazeLanding() {
           <div className="text-center mt-10 sm:mt-16">
             <blockquote
               className="text-lg sm:text-2xl font-light italic max-w-4xl mx-auto text-white text-pretty"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
+
             >
               "New Haze no solo me dio las herramientas, me dio una familia. Cada cultivo es una nueva aventura
               compartida."
@@ -214,7 +214,7 @@ export default function NewHazeLanding() {
             </h2>
             <p
               className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
+
             >
               Productos diseñados por cultivadores, para cultivadores. Cada herramienta es el resultado de años de
               investigación y feedback de nuestra comunidad.
@@ -254,7 +254,7 @@ export default function NewHazeLanding() {
                 <div className="p-6">
                   <h3
                     className="text-2xl font-bold text-foreground mb-3"
-                    style={{ fontFamily: "HVD Poster, sans-serif" }}
+      
                   >
                     {product.title}
                   </h3>
@@ -281,7 +281,7 @@ export default function NewHazeLanding() {
           <div className="max-w-4xl mx-auto">
             <h2
               className="text-center text-4xl sm:text-6xl font-bold mb-6 sm:mb-8 text-white text-balance"
-              style={{ fontFamily: "HVD Poster, sans-serif" }}
+
             >
               UNITE A LA
               <br />
@@ -291,7 +291,7 @@ export default function NewHazeLanding() {
             </h2>
             <p
               className="text-base sm:text-xl mb-8 sm:mb-12 leading-relaxed text-zinc-300 text-pretty"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
+
             >
               Sé parte de una comunidad que está redefiniendo el cultivo indoor.
               <br />
@@ -302,7 +302,7 @@ export default function NewHazeLanding() {
               <Button
                 size="lg"
                 className="bg-[#F18604] hover:bg-[#E07503] text-white px-8 sm:px-12 py-4 text-base sm:text-lg font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
-                style={{ fontFamily: "Montserrat, sans-serif" }}
+  
               >
                 Unirme a la Comunidad
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -312,7 +312,7 @@ export default function NewHazeLanding() {
                 variant="outline"
                 size="lg"
                 className="border-2 border-[#855CF2] text-[#855CF2] hover:bg-[#855CF2] hover:text-white px-8 sm:px-12 py-4 text-base sm:text-lg font-semibold rounded-full transition-all duration-300 bg-transparent w-full sm:w-auto"
-                style={{ fontFamily: "Montserrat, sans-serif" }}
+  
               >
                 Conocer más
               </Button>
@@ -322,7 +322,7 @@ export default function NewHazeLanding() {
               <div>
                 <div
                   className="text-3xl font-bold text-[#855CF2] mb-2"
-                  style={{ fontFamily: "HVD Poster, sans-serif" }}
+    
                 >
                   10K+
                 </div>
@@ -333,7 +333,7 @@ export default function NewHazeLanding() {
               <div>
                 <div
                   className="text-3xl font-bold text-[#00B57C] mb-2"
-                  style={{ fontFamily: "HVD Poster, sans-serif" }}
+    
                 >
                   50+
                 </div>
@@ -344,7 +344,7 @@ export default function NewHazeLanding() {
               <div>
                 <div
                   className="text-3xl font-bold text-[#F18604] mb-2"
-                  style={{ fontFamily: "HVD Poster, sans-serif" }}
+    
                 >
                   24/7
                 </div>
@@ -355,7 +355,7 @@ export default function NewHazeLanding() {
               <div>
                 <div
                   className="text-3xl font-bold text-[#855CF2] mb-2"
-                  style={{ fontFamily: "HVD Poster, sans-serif" }}
+    
                 >
                   100%
                 </div>

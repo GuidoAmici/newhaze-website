@@ -56,11 +56,11 @@ export default function FeaturedClasses() {
       <div>
         <h2
           className="text-3xl sm:text-4xl font-bold mb-2"
-          style={{ fontFamily: "HVD Poster, sans-serif" }}
+
         >
           Clases Recomendadas para Ti
         </h2>
-        <p className="text-muted-foreground" style={{ fontFamily: "Montserrat, sans-serif" }}>
+        <p className="text-muted-foreground" >
           Contenido personalizado basado en tu nivel y progreso
         </p>
       </div>

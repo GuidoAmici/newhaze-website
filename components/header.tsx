@@ -62,7 +62,6 @@ export default function Header() {
             <Button
               variant="subtle"
               className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
               <span className="hidden xs:inline">Aprender</span>
@@ -73,7 +72,6 @@ export default function Header() {
             <Button
               variant="subtle"
               className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               <Brain className="h-4 w-4 sm:h-5 sm:w-5" />
               <span className="hidden xs:inline">Blog</span>
@@ -87,7 +85,6 @@ export default function Header() {
                 <Button
               variant="subtle"
               className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
               <span className="hidden xs:inline">Usuario</span>

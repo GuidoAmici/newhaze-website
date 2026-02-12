@@ -46,7 +46,7 @@ export default function StudentProfile() {
               </div>
               <h2
                 className="text-2xl sm:text-3xl font-bold text-center md:text-left text-balance"
-                style={{ fontFamily: "HVD Poster, sans-serif" }}
+    
               >
                 {studentData.name}
               </h2>

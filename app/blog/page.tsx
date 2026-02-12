@@ -119,13 +119,13 @@ export default function BlogPage() {
                     <div className="p-6">
                       <h3
                         className="text-2xl font-bold mb-3 group-hover:text-[#855CF2] transition-colors duration-300 line-clamp-2 text-foreground"
-                        style={{ fontFamily: "HVD Poster, sans-serif" }}
+          
                       >
                         {guide.title}
                       </h3>
                       <p
                         className="mb-6 leading-relaxed line-clamp-3 text-muted-foreground"
-                        style={{ fontFamily: "Montserrat, sans-serif" }}
+          
                       >
                         {guide.excerpt}
                       </p>

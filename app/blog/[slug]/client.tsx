@@ -173,19 +173,19 @@ Con dedicación y los conocimientos correctos, lograrás cultivos extraordinario
         <div className="container mx-auto max-w-3xl">
           <h1
             className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
-            style={{ fontFamily: "HVD Poster, sans-serif" }}
+
           >
             {guide.title}
           </h1>
           <p
             className="text-lg sm:text-xl text-white/70 mb-4 leading-relaxed"
-            style={{ fontFamily: "Montserrat, sans-serif" }}
+
           >
             {guide.excerpt}
           </p>
           <div
             className="flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm sm:text-base text-white/50"
-            style={{ fontFamily: "Montserrat, sans-serif" }}
+
           >
             {guide.author && <span>Por {guide.author}</span>}
             {guide.publishedDate && <span>{guide.publishedDate}</span>}
@@ -275,7 +275,7 @@ Con dedicación y los conocimientos correctos, lograrás cultivos extraordinario
         <div className="container mx-auto max-w-3xl text-center">
           <h2
             className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
-            style={{ fontFamily: "HVD Poster, sans-serif" }}
+
           >
             ¿Listo para llevar tu cultivo al siguiente nivel?
           </h2>

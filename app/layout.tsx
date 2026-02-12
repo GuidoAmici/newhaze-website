@@ -15,10 +15,11 @@ const _rubik = V0_Font_Rubik({ subsets: ['latin'], weight: ["300","400","500","6
 const _oxanium = V0_Font_Oxanium({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800"] })
 const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
 
+// Initialize system design font
 const heebo = Heebo({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
-  variable: "--font-heebo",
+  variable: "--font-sans",
   display: "swap",
 })
 

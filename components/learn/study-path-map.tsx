@@ -91,7 +91,7 @@ export default function StudyPathMap() {
         >
           Mapa de Caminos de Estudio
         </h2>
-        <p className="text-muted-foreground" style={{ fontFamily: "Montserrat, sans-serif" }}>
+        <p className="text-muted-foreground" >
           Estructura tu aprendizaje en caminos temáticos. Elige especialidades opcionales para profundizar.
         </p>
       </div>
@@ -106,7 +106,7 @@ export default function StudyPathMap() {
             >
               <h3
                 className="text-lg sm:text-xl font-bold mb-1"
-                style={{ fontFamily: "HVD Poster, sans-serif" }}
+    
               >
                 {path.name}
               </h3>

@@ -16,13 +16,13 @@ export default function LearnPage() {
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h1
             className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 text-balance"
-            style={{ fontFamily: "HVD Poster, sans-serif" }}
+
           >
             Aprende, Cultiva, Crece
           </h1>
           <p
             className="text-base sm:text-lg text-white/80 max-w-2xl mx-auto text-pretty"
-            style={{ fontFamily: "Montserrat, sans-serif" }}
+
           >
             Tu camino personalizado hacia el dominio del cultivo indoor. Clases, desafíos y comunidad que te acompañan.
           </p>
