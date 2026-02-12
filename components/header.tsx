@@ -54,16 +54,20 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
 
-        {/* Logo */}
+        {/* Logo -> home */}
         <div className="text-foreground shrink-0">
           <NewHazeLogo className="h-[50px] sm:h-[70px]" href="/" />
         </div>
 
         <div className="flex items-center gap-1.5 sm:gap-3">
 
-          <nav className="flex items-center gap-2">
+          {/* Navigation menu */}
+          <nav
+            className="flex items-center gap-2"
+            aria-label="Navigation menu"
+          >
 
-            {/* Learn */}
+            {/* Learn button*/}
             <Link href="/learn">
               <Button
                 variant="subtle"
@@ -75,7 +79,7 @@ export default function Header() {
               </Button>
             </Link>
 
-            {/* Blog */}
+            {/* Blog button */}
             <Link href="/blog">
               <Button
                 variant="subtle"
@@ -86,8 +90,13 @@ export default function Header() {
                 <span className="hidden xs:inline">Blog</span>
               </Button>
             </Link>
+          </nav>
 
-            {/* Clerk Authentication Button */}
+          <nav
+            className="flex items-center gap-2"
+            aria-label="User menu"
+          >
+            {/* User Setting / Authentication Button */}
             {!isSignedIn ? (
               <SignInButton mode="modal">
                 <Button
@@ -102,10 +111,9 @@ export default function Header() {
             ) : (
               <UserButton/>
             )}
-          </nav>
 
 
-          {/* Settings Menu */}
+          {/* App Settings button */}
           <div className="relative" ref={settingsRef}>
             <Button
               variant="subtle"
@@ -121,6 +129,7 @@ export default function Header() {
             </Button>
 
             {isSettingsOpen && (
+            {/* Settings menu */}
               <div 
                 className="absolute right-0 mt-2 w-52 sm:w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50"
                 style={{
