@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { SignInButton, UserButton } from "@clerk/nextjs"
 import { useUser } from "@clerk/nextjs"
 
-export function UserSettingsMenu() {
+export function UserMenu() {
   const { isSignedIn } = useUser()
 
   return (
