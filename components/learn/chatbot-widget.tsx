@@ -86,13 +86,13 @@ export default function ChatbotWidget() {
   return (
     <>
       {/* Chatbot Button */}
-      <Button
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-6 right-6 rounded-full w-14 h-14 p-0 shadow-lg hover:shadow-xl transition-all duration-300 z-40 bg-[#855CF2] hover:bg-[#6B46C1]"
         aria-label="Abrir chat"
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
-      </Button>
+      </button>
 
       {/* Chatbot Widget */}
       {isOpen && (
