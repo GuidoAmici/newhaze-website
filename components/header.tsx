@@ -61,7 +61,7 @@ export default function Header() {
           <Link href="/learn">
             <Button
               variant="subtle"
-              className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2"
+              className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               <GraduationCap className="sm:w-5 sm:h-5 h-4 w-4" />
