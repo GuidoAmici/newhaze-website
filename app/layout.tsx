@@ -8,17 +8,32 @@ import { dark } from '@clerk/themes'
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
-import { Rubik, Heebo as V0_Font_Heebo, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+import { Rubik, Roboto_Slab, Rubik_Mono_1, Heebo as V0_Font_Heebo, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
 // Initialize fonts
 const _heebo = V0_Font_Heebo({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
 
+// Initialize System Design fonts
 const rubik = Rubik({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
+  display: "swap",
+})
+
+const robotoSlab = Roboto_Slab({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-serif",
+  display: "swap",
+})
+
+const rubikMono = Rubik_Mono_1({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-mono",
   display: "swap",
 })
 
@@ -55,7 +70,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`font-sans ${rubik.variable}`}>
+      <body className={`font-sans ${rubik.variable} ${robotoSlab.variable} ${rubikMono.variable}`}>
         <ClerkProvider
           appearance={{
             theme: dark,
