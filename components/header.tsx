@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { Moon, Sun, Settings, User, GraduationCap } from "lucide-react"
+import { Moon, Sun, Settings, User, LucideBrainIcon,BrainIcon,GraduatiBrainIcon,BrainCircuitIcon,onCap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
 import NewHazeLogo from "@/components/new-haze-logo"
@@ -75,7 +75,8 @@ export default function Header() {
               className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary hover:bg-primary hover:text-primary-foreground rounded-full transition-all duration-300 text-foreground bg-muted text-xs sm:text-sm flex items-center justify-center"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              <GraduationCap className="w-5 h-5" />
+              <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
+              <span className="hidden xs:inline">Blog</span>
             </button>
           </Link>
 
