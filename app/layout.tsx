@@ -8,21 +8,6 @@ import { dark } from '@clerk/themes'
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
-import { Heebo, Heebo as V0_Font_Heebo, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
-
-// Initialize fonts
-const _heebo = V0_Font_Heebo({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
-const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
-const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
-
-// Initialize system design font
-const heebo = Heebo({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-sans",
-  display: "swap",
-})
-
 export const metadata: Metadata = {
   title: "New Haze - Cultivá tu Futuro",
   description: "Marca innovadora en cultivo indoor. Ciencia, naturaleza y comunidad cultivadora.",
