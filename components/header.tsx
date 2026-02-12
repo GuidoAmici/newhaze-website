@@ -55,53 +55,60 @@ export default function Header() {
       className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
         <nav className="flex items-center gap-2">
-        <div className="text-foreground shrink-0">
-          <NewHazeLogo className="h-[50px] sm:h-[70px]" href="/" />
-        </div>
 
-          <Link href="/learn">
-            <Button
-              variant="subtle"
-              className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
-            >
-              <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
-              <span className="hidden xs:inline">Aprender</span>
-            </Button>
-          </Link>
-
-          <Link href="/blog">
-            <Button
-              variant="subtle"
-              className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
-            >
-              <Brain className="h-4 w-4 sm:h-5 sm:w-5" />
-              <span className="hidden xs:inline">Blog</span>
-            </Button>
-          </Link>
+          {/* Logo */}
+          <div className="text-foreground shrink-0">
+            <NewHazeLogo className="h-[50px] sm:h-[70px]" href="/" />
+          </div>
 
           <div className="flex items-center gap-1.5 sm:gap-3">
-            {/* Clerk Authentication Buttons */}
+
+            {/* Learn */}
+            <Link href="/learn">
+              <Button
+                variant="subtle"
+                className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
+              >
+                <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="hidden xs:inline">Aprender</span>
+              </Button>
+            </Link>
+
+            {/* Blog */}
+            <Link href="/blog">
+              <Button
+                variant="subtle"
+                className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
+              >
+                <Brain className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="hidden xs:inline">Blog</span>
+              </Button>
+            </Link>
+
+            {/* Clerk Authentication Button */}
             {!isSignedIn ? (
               <SignInButton mode="modal">
                 <Button
-              variant="subtle"
-              className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
-            >
-              <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
-              <span className="hidden xs:inline">Usuario</span>
-            </Button>
+                  variant="subtle"
+                  className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
+                >
+                  <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="hidden xs:inline">Usuario</span>
+                </Button>
               </SignInButton>
             ) : (
-              <UserButton />
+              <UserButton className="h-4 w-4 sm:h-5 sm:w-5">
+              <UserButton/>
             )}
+
 
             {/* Settings Menu */}
             <div className="relative" ref={settingsRef}>
               <Button
+                aria-label="Settings"
                 variant="subtle"
                 onClick={toggleSettings}
                 className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300"
-                aria-label="Configuración"
               >
                 <Settings className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
@@ -155,7 +162,6 @@ export default function Header() {
                 </div>
               )}
             </div>
-          </div>
         </nav>
       </div>
     </header>
