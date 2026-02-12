@@ -20,7 +20,7 @@ export default function NewHazeLanding() {
         <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1
-              className="text-4xl sm:text-6xl md:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight text-balance"
+              className="text-5xl sm:text-6xl md:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight text-balance"
 
             >
               CULTIVÁ TU
