@@ -4,7 +4,7 @@ import Link from "next/link"
 import { GraduationCap, Brain } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import NewHazeLogo from "@/components/new-haze-logo"
-import { UserSettingsMenu } from "@/components/header/user-menu"
+import { UserMenu } from "@/components/header/user-menu"
 import { AppSettingsMenu } from "@/components/header/app-settings-menu"
 
 export default function Header() {
