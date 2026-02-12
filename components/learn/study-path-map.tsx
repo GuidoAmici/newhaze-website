@@ -87,7 +87,7 @@ export default function StudyPathMap() {
       <div>
         <h2
           className="text-3xl sm:text-4xl font-bold mb-2"
-          style={{ fontFamily: "HVD Poster, sans-serif" }}
+
         >
           Mapa de Caminos de Estudio
         </h2>

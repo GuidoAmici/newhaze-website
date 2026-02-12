@@ -87,7 +87,7 @@ export default function FeaturedClasses() {
               {/* Title and category */}
               <div className="mb-4">
                 <div className="flex items-start justify-between gap-3 mb-3">
-                  <h3 className="font-bold text-lg flex-1" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+                  <h3 className="font-bold text-lg flex-1" >
                     {course.title}
                   </h3>
                   <Badge variant="secondary" className="shrink-0">

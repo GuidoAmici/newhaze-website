@@ -209,7 +209,6 @@ Con dedicación y los conocimientos correctos, lograrás cultivos extraordinario
         <div className="container mx-auto max-w-3xl">
           <div
             className="prose prose-invert max-w-2xl mx-auto text-white/80 leading-8 space-y-6"
-            style={{ fontFamily: "Montserrat, sans-serif", maxWidth: "700px" }}
           >
             {blocks.map((block, index) => {
               if (block.type === "h2") {

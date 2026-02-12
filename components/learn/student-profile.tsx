@@ -40,7 +40,7 @@ export default function StudentProfile() {
             <div className="flex flex-col items-center justify-center md:items-start">
               <div className="relative w-32 h-32 flex items-center justify-center mb-6">
                 <div className="absolute inset-0 bg-white/20 rounded-full"></div>
-                <div className="text-6xl font-bold z-10" style={{ fontFamily: "HVD Poster, sans-serif" }}>
+                <div className="text-6xl font-bold z-10">
                   {studentData.level}
                 </div>
               </div>
