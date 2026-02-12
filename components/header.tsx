@@ -54,8 +54,8 @@ export default function Header() {
             className="flex items-center gap-2"
             aria-label="User menu"
           >
-            {/* User Settings */}
-            <UserSettingsMenu />
+            {/* User Menu */}
+            <UserMenu />
 
             {/* App Settings */}
             <AppSettingsMenu />
