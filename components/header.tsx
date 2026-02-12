@@ -51,17 +51,17 @@ export default function Header() {
   }
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-md border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
-        <nav className="flex items-center gap-2">
 
-          {/* Logo */}
-          <div className="text-foreground shrink-0">
-            <NewHazeLogo className="h-[50px] sm:h-[70px]" href="/" />
-          </div>
+        {/* Logo */}
+        <div className="text-foreground shrink-0">
+          <NewHazeLogo className="h-[50px] sm:h-[70px]" href="/" />
+        </div>
 
-          <div className="flex items-center gap-1.5 sm:gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-3">
+
+          <nav className="flex items-center gap-2">
 
             {/* Learn */}
             <Link href="/learn">
@@ -97,7 +97,6 @@ export default function Header() {
                 </Button>
               </SignInButton>
             ) : (
-              <UserButton className="h-4 w-4 sm:h-5 sm:w-5">
               <UserButton/>
             )}
 
