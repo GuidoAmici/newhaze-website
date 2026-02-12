@@ -10,11 +10,6 @@ import "./globals.css"
 
 import { Rubik, Roboto_Slab, Rubik_Mono_1 } from 'next/font/google'
 
-// Initialize fonts
-const _heebo = V0_Font_Heebo({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
-const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
-const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
-
 // Initialize System Design fonts
 const rubik = Rubik({
   subsets: ["latin"],
