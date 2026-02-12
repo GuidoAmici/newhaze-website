@@ -71,11 +71,12 @@ export default function Header() {
 
           <Link href="/blog">
             <Button
-              variant="outline"
-              className="text-xs sm:text-sm"
+              variant="subtle"
+              className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              Blog & Guías
+              <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
+              <span className="hidden xs:inline">Blog</span>
             </Button>
           </Link>
 
@@ -83,12 +84,14 @@ export default function Header() {
             {/* Clerk Authentication Buttons */}
             {!isSignedIn ? (
               <SignInButton mode="modal">
-                <button
-                  className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300"
-                  aria-label="Iniciar sesión"
-                >
-                  <User className="h-4 w-4 sm:h-5 sm:w-5" />
-                </button>
+                <Button
+              variant="subtle"
+              className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+            >
+              <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
+              <span className="hidden xs:inline">Usuario</span>
+            </Button>
               </SignInButton>
             ) : (
               <UserButton />
