@@ -68,6 +68,7 @@ export default function Header() {
               <Button
                 variant="subtle"
                 className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
+                aria-label="Learn"
               >
                 <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
                 <span className="hidden xs:inline">Aprender</span>
@@ -79,6 +80,7 @@ export default function Header() {
               <Button
                 variant="subtle"
                 className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
+                aria-label="Blog"
               >
                 <Brain className="h-4 w-4 sm:h-5 sm:w-5" />
                 <span className="hidden xs:inline">Blog</span>
@@ -92,6 +94,7 @@ export default function Header() {
                   variant="subtle"
                   className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
                 >
+                aria-label="Sign in"
                   <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
                   <span className="hidden xs:inline">Usuario</span>
                 </Button>
@@ -105,11 +108,11 @@ export default function Header() {
           {/* Settings Menu */}
           <div className="relative" ref={settingsRef}>
             <Button
-              aria-label="Settings"
               variant="subtle"
               onClick={toggleSettings}
               className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300"
-            >
+              aria-label="Settings"
+              >
               <Settings className="h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
 
