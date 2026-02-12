@@ -62,10 +62,10 @@ export default function Header() {
           <Link href="/learn">
             <button
               variant="outline"
-              className="border border-primary hover:bg-primary hover:text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-foreground bg-muted text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2"
+              className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-primary-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+              <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
               <span className="hidden xs:inline">Aprender</span>
             </button>
           </Link>
@@ -73,19 +73,18 @@ export default function Header() {
           <Link href="/blog">
             <button
               variant="outline"
-              className="border border-primary hover:bg-primary hover:text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-foreground bg-muted text-xs sm:text-sm"
+              className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-primary-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              Blog & Guías
-          </Link>
+              📖
             </button>
+          </Link>
 
-          <div className="flex items-center gap-1.5 sm:gap-3">
             {/* Clerk Authentication Buttons */}
             {!isSignedIn ? (
               <SignInButton mode="modal">
                 <button
-                  className="h-8 w-8 sm:h-10 sm:w-10 rounded-full text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300 bg-muted"
+                  className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-primary-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
                   aria-label="Iniciar sesión"
                 >
                   <User className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -99,7 +98,7 @@ export default function Header() {
             <div className="relative" ref={settingsRef}>
               <button
                 onClick={toggleSettings}
-                className="h-8 w-8 sm:h-10 sm:w-10 rounded-full text-primary-foreground flex items-center justify-center hover:opacity-90 transition-opacity duration-300 bg-muted"
+                className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-primary-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
                 aria-label="Configuración"
               >
                 <Settings className="h-4 w-4 sm:h-5 sm:w-5" />
