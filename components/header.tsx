@@ -69,7 +69,6 @@ export default function Header() {
               <span className="hidden xs:inline">Aprender</span>
             </button>
           </Link>
-          </div>
 
           <Link href="/blog">
             <button
@@ -78,8 +77,8 @@ export default function Header() {
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               Blog & Guías
-            </button>
           </Link>
+            </button>
 
           <div className="flex items-center gap-1.5 sm:gap-3">
             {/* Clerk Authentication Buttons */}
