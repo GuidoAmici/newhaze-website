@@ -62,7 +62,7 @@ export default function Header() {
           <Link href="/learn">
             <button
               variant="outline"
-              className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-primary-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
+              className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -73,10 +73,10 @@ export default function Header() {
           <Link href="/blog">
             <button
               variant="outline"
-              className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-primary-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
+              className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              📖
+              <User />
             </button>
           </Link>
 
@@ -84,7 +84,7 @@ export default function Header() {
             {!isSignedIn ? (
               <SignInButton mode="modal">
                 <button
-                  className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-primary-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
+                  className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
                   aria-label="Iniciar sesión"
                 >
                   <User className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -98,14 +98,14 @@ export default function Header() {
             <div className="relative" ref={settingsRef}>
               <button
                 onClick={toggleSettings}
-                className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-primary-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
+                className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-bg-primary duration-300 flex items-center justify-center"
                 aria-label="Configuración"
               >
                 <Settings className="h-4 w-4 sm:h-5 sm:w-5" />
               </button>
 
               {isSettingsOpen && (
-                <div className={`absolute right-0 mt-2 w-52 sm:w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50 transition-all duration-200 ${
+                <div className={`absolute right-0 mt-2 w-52 sm:w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50 transition-all duration-300 ${
                   isSettingsClosing
                     ? "opacity-0 pointer-events-none"
                     : "opacity-100"
@@ -134,7 +134,7 @@ export default function Header() {
                       >
                         <span
                           className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-transform duration-300 ${
-                            theme === "dark" ? "translate-x-6" : "translate-x-1"
+                            theme === "dark" ? "translate-x-6 transition-translate" : "translate-x-1 transition-translate"
                           }`}
                         />
                       </button>
