@@ -61,7 +61,7 @@ export default function Header() {
           <Link href="/learn">
             <button
               variant="outline"
-              className="border border-primary hover:bg-primary hover:text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-foreground bg-muted text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2"
+              className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary hover:bg-primary hover:text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-foreground bg-muted text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
@@ -72,7 +72,7 @@ export default function Header() {
           <Link href="/blog">
             <button
               variant="outline"
-              className="border border-primary hover:bg-primary hover:text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-foreground bg-muted text-xs sm:text-sm"
+              className="h-8 w-8 sm:h-10 sm:w-10 rounded-full border border-primary hover:bg-primary hover:text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-foreground bg-muted text-xs sm:text-sm"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               Blog & Guías
