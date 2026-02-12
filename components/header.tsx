@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { Moon, Sun, Settings, User } from "lucide-react"
+import { Moon, Sun, Settings, User, GraduationCap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
 import NewHazeLogo from "@/components/new-haze-logo"
@@ -58,6 +58,17 @@ export default function Header() {
         </div>
 
         <nav className="flex items-center gap-2 sm:gap-4">
+          <Link href="/learn">
+            <Button
+              variant="outline"
+              className="border border-primary hover:bg-primary hover:text-primary-foreground px-3 sm:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-300 text-foreground bg-muted text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2"
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+            >
+              <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+              <span className="hidden xs:inline">Aprender</span>
+            </Button>
+          </Link>
+
           <Link href="/blog">
             <Button
               variant="outline"
