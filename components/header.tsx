@@ -119,7 +119,7 @@ export default function Header() {
               variant="subtle"
               className="h-8 w-8 sm:h-10 sm:w-10 text-xs sm:text-sm flex items-center"
               onClick={toggleSettings}
-              aria-label="Settings"
+              aria-label="App Settings"
             >
               <Settings 
                 className={`h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-300 ${
