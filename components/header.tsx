@@ -51,13 +51,14 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-md border-b border-white/10">
+    <header
+      className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+        <nav className="flex items-center gap-2">
         <div className="text-foreground shrink-0">
           <NewHazeLogo className="h-[50px] sm:h-[70px]" href="/" />
         </div>
 
-        <nav className="flex items-center gap-2">
           <Link href="/learn">
             <Button
               variant="subtle"
