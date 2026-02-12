@@ -143,8 +143,7 @@ export default function Header() {
                         className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 ${
                           theme === "dark" ? "bg-accent" : "bg-muted"
                         }`}
-                        aria-label="Cambiar tema"
-                      >
+                        aria-label="Cambiar tema" >
                         <span
                           className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-transform duration-300 ${
                             theme === "dark" ? "translate-x-5" : "translate-x-0.5"
