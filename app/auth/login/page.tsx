@@ -73,7 +73,7 @@ export default function LoginPage() {
               type="submit"
               disabled={isLoading}
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full py-2 transition-colors"
-  
+
             >
               {isLoading ? "Ingresando..." : "Ingresar"}
             </Button>
@@ -90,7 +90,7 @@ export default function LoginPage() {
         {/* Back to home */}
         <div className="mt-6 text-center">
           <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-            ← Volver al inicio
+            Continuar como invitado (づ￣ 3￣)づ
           </Link>
         </div>
       </div>
