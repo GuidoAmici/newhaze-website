@@ -75,17 +75,17 @@ export default function BlogPage() {
         <div className="container mx-auto max-w-4xl">
           <h1
             className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-foreground"
-            style={{ fontFamily: "HVD Poster, sans-serif" }}
+
           >
             Blog & Guías
           </h1>
           <div className="bg-[#855CF2]/10 border border-[#855CF2]/30 rounded-lg p-6 mb-8">
-            <p className="text-lg leading-relaxed text-foreground" style={{ fontFamily: "Montserrat, sans-serif" }}>
+            <p className="text-lg leading-relaxed text-foreground" >
               Explorá nuestras guías y artículos pensados para cultivadores que buscan precisión, innovación y
               resultados reales.
             </p>
           </div>
-          <p className="leading-relaxed text-muted-foreground" style={{ fontFamily: "Montserrat, sans-serif" }}>
+          <p className="leading-relaxed text-muted-foreground" >
             Desde técnicas avanzadas hasta soluciones prácticas, aquí encontrarás todo lo necesario para maximizar tu
             cultivo indoor.
           </p>
@@ -119,13 +119,13 @@ export default function BlogPage() {
                     <div className="p-6">
                       <h3
                         className="text-2xl font-bold mb-3 group-hover:text-[#855CF2] transition-colors duration-300 line-clamp-2 text-foreground"
-                        style={{ fontFamily: "HVD Poster, sans-serif" }}
+          
                       >
                         {guide.title}
                       </h3>
                       <p
                         className="mb-6 leading-relaxed line-clamp-3 text-muted-foreground"
-                        style={{ fontFamily: "Montserrat, sans-serif" }}
+          
                       >
                         {guide.excerpt}
                       </p>

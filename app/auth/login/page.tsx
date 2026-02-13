@@ -32,7 +32,7 @@ export default function LoginPage() {
         <div className="bg-card rounded-lg border border-border p-8 shadow-lg">
           <h1
             className="text-2xl font-bold text-foreground mb-2 text-center"
-            style={{ fontFamily: "Montserrat, sans-serif" }}
+
           >
             Ingresar
           </h1>
@@ -73,7 +73,7 @@ export default function LoginPage() {
               type="submit"
               disabled={isLoading}
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-full py-2 transition-colors"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
+  
             >
               {isLoading ? "Ingresando..." : "Ingresar"}
             </Button>
