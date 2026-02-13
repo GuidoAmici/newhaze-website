@@ -21,7 +21,7 @@ export function CTASection() {
             Donde la ciencia, la naturaleza y la pasión se encuentran.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="h-10 sm:h-12 flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button variant="CTA-primary">
               Unirme a la Comunidad
               <ArrowRight className="ml-2 h-5 w-5" />
