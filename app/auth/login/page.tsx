@@ -90,7 +90,7 @@ export default function LoginPage() {
         {/* Back to home */}
         <div className="mt-6 text-center">
           <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-            Continuar como invitado (づ￣ 3￣)づ
+            Continuar como invitado ➤
           </Link>
         </div>
       </div>
