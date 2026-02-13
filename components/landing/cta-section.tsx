@@ -1,7 +1,8 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Link } from "lucide-react"
+import { SignInButton } from "@clerk/nextjs"
 
 export function CTASection() {
   return (
@@ -21,11 +22,13 @@ export function CTASection() {
             Donde la ciencia, la naturaleza y la pasión se encuentran.
           </p>
 
-          <div className="h-10 sm:h-12 flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button variant="CTA-primary">
-              Unirme a la Comunidad
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+          <div className="h-10 sm:h-40 flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <SignInButton mode="modal">
+              <Button variant="CTA-primary">
+                Unirme a la Comunidad
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </SignInButton>
 
             <Button
               variant="subtle"
