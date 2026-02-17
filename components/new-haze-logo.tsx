@@ -1,9 +1,16 @@
+"use client"
+
 // ⭐ Roles: Frontend Engineer + UX/UI Designer
 // Versión con TODAS las animaciones originales pero sin contraste dinámico.
 // El logo ahora mantiene un color fijo, sin lógica de cambio según el fondo.
 
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
+
+interface NewHazeLogoProps {
+  className?: string
+  href?: string
+}
 
 export default function NewHazeLogo({
   className = "h-[70px]",
