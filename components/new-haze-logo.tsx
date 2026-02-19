@@ -12,19 +12,12 @@ export default function NewHazeLogo({
   const [visible, setVisible] = useState(false)    // Controla la animación de fade-in
   const logoRef = useRef<HTMLAnchorElement | null>(null) // Referencia al contenedor del logo
 
-  // Fade-in inicial
-  useEffect(() => {
-    setMounted(true)
-    const timer = setTimeout(() => setVisible(true), 80)
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
     <Link
       ref={logoRef}
       href={href}
       aria-label="Inicio"
-      className={`inline-flex items-center group`}
+      className={`inline-flex items-center`}
     >
 
       {/* SVG original (solo ajustado para usar fill fijo) */}
