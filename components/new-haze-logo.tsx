@@ -9,7 +9,6 @@ export default function NewHazeLogo({
   className = "h-[70px]",
   href = "/",
 }: NewHazeLogoProps) {
-  const [visible, setVisible] = useState(false)    // Controla la animación de fade-in
   const logoRef = useRef<HTMLAnchorElement | null>(null) // Referencia al contenedor del logo
 
   return (
