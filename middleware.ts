@@ -1,7 +1,5 @@
-import { clerkMiddleware } from '@clerk/nextjs/server'
-
-// No proteger nada, todo es público
-export default clerkMiddleware()
+// Auth is handled client-side via AuthContext. No server middleware needed.
+export function middleware() {}
 
 export const config = {
   matcher: [

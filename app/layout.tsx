@@ -3,8 +3,7 @@ import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { BlogNavProvider } from "@/components/blog-nav-provider"
-import { ClerkProvider } from "@clerk/nextjs"
-import { dark } from '@clerk/themes'
+import { AuthProvider } from "@/contexts/AuthContext"
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
@@ -85,14 +84,10 @@ export default function RootLayout({
         />
       </head>
       <body className={`font-sans ${rubik.variable} ${robotoSlab.variable} ${robotoMono.variable} ${rubikGlitch.variable} ${rubikDoodleShadow.variable}`}>
-        <ClerkProvider
-          appearance={{
-            theme: dark,
-          }}
-        >
-          <ThemeProvider 
-            attribute="class" 
-            defaultTheme="dark" 
+        <AuthProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
             enableSystem={false}
             storageKey="theme"
             disableTransitionOnChange
@@ -101,7 +96,7 @@ export default function RootLayout({
               {children}
             </BlogNavProvider>
           </ThemeProvider>
-        </ClerkProvider>
+        </AuthProvider>
         <Analytics />
         <SpeedInsights />
       </body>
