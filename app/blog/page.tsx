@@ -23,6 +23,7 @@ export default function BlogPage() {
     const fetchGuides = async () => {
       try {
         const response = await fetch("/api/guides")
+        if (!response.ok) throw new Error(`HTTP ${response.status}`)
         const data = await response.json()
         setGuides(data)
       } catch (error) {
