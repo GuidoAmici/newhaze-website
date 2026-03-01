@@ -55,6 +55,15 @@ export function UserMenu() {
         <div className="absolute right-0 mt-2 w-48 z-50 bg-card border border-border rounded-md shadow-lg overflow-hidden">
           <div className="px-3 py-2 border-b border-border">
             <p className="text-xs text-muted-foreground truncate">{user.email}</p>
+            {user.roles && user.roles.filter(r => r !== "consumer").length > 0 && (
+              <div className="flex gap-1 flex-wrap mt-1">
+                {user.roles.filter(r => r !== "consumer").map(role => (
+                  <span key={role} className="text-[9px] px-1.5 py-0.5 rounded bg-accent text-accent-foreground uppercase tracking-wider">
+                    {role.replace(/_/g, " ")}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
           <Link
             href="/perfil"

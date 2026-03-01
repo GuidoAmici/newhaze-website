@@ -5,6 +5,7 @@ import { tokens } from "@/lib/api"
 import {
   type AuthUser,
   login as apiLogin,
+  loginWithGoogle as apiLoginWithGoogle,
   logout as apiLogout,
   register as apiRegister,
   verifyOtp as apiVerifyOtp,
@@ -19,12 +20,14 @@ interface AuthContextValue {
   loading: boolean
   // Auth operations
   login: (email: string, password: string) => Promise<AuthUser>
+  loginWithGoogle: (googleToken: string) => Promise<AuthUser>
   logout: () => Promise<void>
   register: (email: string, password: string, role?: string) => Promise<void>
   verifyOtp: (email: string, token: string) => Promise<AuthUser>
   resendOtp: (email: string) => Promise<void>
   forgotPassword: (email: string) => Promise<void>
   updateUsername: (username: string) => Promise<void>
+  hasRole: (role: string) => boolean
   // Utils
   setUser: (user: AuthUser | null) => void
 }
@@ -60,6 +63,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setUser(u)
     return u
   }, [])
+
+  const loginWithGoogle = useCallback(async (googleToken: string) => {
+    const u = await apiLoginWithGoogle(googleToken)
+    setUser(u)
+    return u
+  }, [])
+
+  const hasRole = useCallback((role: string) => {
+    return user?.roles?.includes(role) ?? false
+  }, [user])
 
   const logout = useCallback(async () => {
     await apiLogout()
@@ -98,12 +111,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         user,
         loading,
         login,
+        loginWithGoogle,
         logout,
         register,
         verifyOtp,
         resendOtp,
         forgotPassword,
         updateUsername,
+        hasRole,
         setUser,
       }}
     >

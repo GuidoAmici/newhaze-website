@@ -7,8 +7,8 @@ export interface AuthUser {
   avatarUrl: string | null
   xp: number
   level: number
-  role: string
-  roleStatus: string
+  roles: string[]
+  earlyAccess: boolean
 }
 
 // Registro: crea cuenta y dispara OTP — no devuelve tokens
@@ -81,4 +81,17 @@ export async function updateUsername(username: string): Promise<void> {
     method: "PUT",
     body: JSON.stringify({ username }),
   })
+}
+
+// Google OAuth: envía el id_token de Google al backend
+export async function loginWithGoogle(googleToken: string): Promise<AuthUser> {
+  const data = await apiFetch<{ accessToken: string; refreshToken: string; user: AuthUser }>(
+    "/api/auth/google",
+    {
+      method: "POST",
+      body: JSON.stringify({ googleToken }),
+    }
+  )
+  tokens.save(data.accessToken, data.refreshToken)
+  return data.user
 }

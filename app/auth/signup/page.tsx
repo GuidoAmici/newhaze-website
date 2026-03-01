@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -18,7 +18,7 @@ const ROLE_OPTIONS = [
 
 export default function SignupPage() {
   const router = useRouter()
-  const { register, verifyOtp, resendOtp, updateUsername } = useAuth()
+  const { register, verifyOtp, resendOtp, updateUsername, loginWithGoogle } = useAuth()
 
   const [step, setStep] = useState<Step>("form")
   const [email, setEmail] = useState("")
@@ -30,6 +30,47 @@ export default function SignupPage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [resendCooldown, setResendCooldown] = useState(false)
+
+  // Google Sign-In
+  const handleGoogleCredential = useCallback(async (response: { credential?: string }) => {
+    if (!response?.credential) return
+    setLoading(true)
+    setError(null)
+    try {
+      await loginWithGoogle(response.credential)
+      setStep("username")
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : "Error al registrarse con Google")
+    } finally {
+      setLoading(false)
+    }
+  }, [loginWithGoogle])
+
+  useEffect(() => {
+    const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID
+    if (!GOOGLE_CLIENT_ID) return
+
+    const w = window as Window & { google?: { accounts: { id: { initialize: (opts: Record<string, unknown>) => void; prompt: () => void } } } }
+    if (w.google?.accounts?.id) {
+      w.google.accounts.id.initialize({ client_id: GOOGLE_CLIENT_ID, callback: handleGoogleCredential })
+      return
+    }
+
+    const script = document.createElement("script")
+    script.src = "https://accounts.google.com/gsi/client"
+    script.async = true
+    script.defer = true
+    script.onload = () => {
+      const gw = window as Window & { google?: { accounts: { id: { initialize: (opts: Record<string, unknown>) => void; prompt: () => void } } } }
+      gw.google?.accounts?.id?.initialize({ client_id: GOOGLE_CLIENT_ID, callback: handleGoogleCredential })
+    }
+    document.head.appendChild(script)
+  }, [handleGoogleCredential])
+
+  const handleGoogleClick = () => {
+    const w = window as Window & { google?: { accounts: { id: { prompt: () => void } } } }
+    w.google?.accounts?.id?.prompt()
+  }
 
   // Paso 1: registro → envía OTP
   const handleRegister = async () => {
@@ -185,6 +226,24 @@ export default function SignupPage() {
                   {loading ? "Creando cuenta..." : "Crear cuenta"}
                 </Button>
               </div>
+
+              {process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID && (
+                <>
+                  <div className="flex items-center gap-3 my-2">
+                    <div className="flex-1 h-px bg-border" />
+                    <span className="text-xs text-muted-foreground">o</span>
+                    <div className="flex-1 h-px bg-border" />
+                  </div>
+                  <Button
+                    variant="outline"
+                    onClick={handleGoogleClick}
+                    disabled={loading}
+                    className="w-full rounded-full py-2 transition-colors"
+                  >
+                    Continuar con Google
+                  </Button>
+                </>
+              )}
 
               <div className="mt-6 text-center text-sm text-muted-foreground">
                 ¿Ya tienes cuenta?{" "}
